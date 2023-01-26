@@ -1,0 +1,156 @@
+#car-status {
+  margin-top: 200px;
+  .container {
+    .title {
+      margin-bottom: 40px;
+      h2 {
+        font-family: var(--main-color);
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 107.34%;
+        letter-spacing: -0.0028em;
+        color: #fefefe;
+      }
+    }
+  }
+
+  .car-details-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    .img-container {
+      width: 601px;
+      height: 337px;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    .info-container {
+      width: 384px;
+      height: 337px;
+      left: 754px;
+      top: 864px;
+      background: rgba(112, 76, 37, 0.2);
+      backdrop-filter: blur(15px);
+      padding: 40px;
+
+      border-radius: 20px;
+
+      .info-inner {
+        .car-brand,
+        .car-year,
+        .car-acceleration,
+        .car-price {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          h3,
+          span {
+            font-family: var(--main-font);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: -0.0278em;
+            color: #ffffff;
+          }
+          h3 {
+            font-weight: 400;
+          }
+        }
+
+        .car-model {
+          h3 {
+            font-family: var(--main-font);
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            letter-spacing: -0.0278em;
+            color: #ffffff;
+          }
+        }
+        .car-price {
+          margin-top: 38px;
+          h3 {
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 27px;
+            letter-spacing: -0.0278em;
+            color: #ffffff;
+          }
+          span {
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 39px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#status-history {
+  .container {
+    .title {
+      margin-bottom: 36px;
+      h1 {
+        font-family: var(--main-color);
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 107.34%;
+        letter-spacing: -0.0028em;
+        color: #fefefe;
+      }
+    }
+
+    .table {
+      thead {
+        // border: none;
+        background-color: var(--main-color);
+        tr {
+          th {
+            // border: none;
+            font-family: var(--main-font);
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 107.34%;
+            letter-spacing: -0.0028em;
+            color: #020204;
+          }
+        }
+      }
+      tbody {
+        tr {
+          th {
+            font-family: var(--main-font);
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 107.34%;
+            letter-spacing: -0.0028em;
+            color: #fefefe;
+          }
+          td {
+            font-family: var(--main-font);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 107.34%;
+            letter-spacing: -0.0028em;
+            color: #fefefe;
+          }
+        }
+      }
+    }
+  }
+}

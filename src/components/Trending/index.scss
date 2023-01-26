@@ -1,0 +1,306 @@
+#trending {
+  .container {
+    .title {
+      margin-bottom: 40px;
+      h4 {
+        font-family: var(--main-font);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        letter-spacing: 0.0022em;
+        color: #ffffff;
+      }
+    }
+    .trending-wrap {
+      .rec-dot {
+        border: 4px solid #b57f4f !important;
+        border-radius: 0 !important;
+        width: 42px !important;
+        height: 0px !important;
+        background-color: var(--main-color) !important;
+        box-shadow: none !important;
+        opacity: 0.5;
+        margin-top: 28px;
+
+        @media screen and (max-width: 450px) {
+          border: 2px solid #b57f4f !important;
+        }
+      }
+
+      .rec-dot_active {
+        opacity: 1;
+      }
+      .rec-carousel {
+        .rec-arrow {
+          display: none;
+        }
+
+        .rec-carousel-item {
+          .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #18110b;
+            padding: 20px;
+            margin-right: 24px;
+            border-radius: 10px !important;
+
+            .img-container {
+              width: 215px;
+              height: 136px;
+              margin-right: 0 !important;
+              margin-bottom: 15px;
+              align-self: center;
+
+              img {
+                width: 100%;
+                max-height: 100%;
+                border-radius: 10px;
+              }
+            }
+
+            .text-container {
+              width: 217px;
+
+              .brand,
+              .model-name {
+                h5 {
+                  font-family: var(--main-font);
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 20px;
+                  letter-spacing: -0.0278em;
+                  color: #ffffff;
+                  margin-bottom: 4px;
+                }
+              }
+              .model-name h5 {
+                font-weight: 700;
+                margin-bottom: 12px;
+              }
+
+              .model-year,
+              .acceleration,
+              .price {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
+                font-family: var(--main-font);
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 162.84%;
+                letter-spacing: -0.0278em;
+                color: #fefefe;
+              }
+
+              h5 {
+                font-family: "Montserrat";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 162.84%;
+                letter-spacing: -0.0278em;
+                color: #fefefe;
+              }
+
+              span {
+                font-family: "Montserrat";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: -0.0278em;
+                color: #ffffff;
+              }
+
+              .more-btn {
+                text-align: center;
+                margin-top: 17px;
+                a {
+                  text-decoration: none;
+                  button {
+                    width: 100%;
+                    height: 47px;
+                    background-color: transparent;
+                    border: 2px solid var(--main-color);
+                    border-radius: 10px;
+                    color: var(--main-color);
+                    font-family: var(--main-font);
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 20px;
+                    transition: all ease-in-out 0.3s;
+                  }
+                }
+
+                &:hover {
+                  a button {
+                    background-color: var(--main-color);
+                    color: #020204;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 992px) {
+      .title {
+        margin-bottom: 20px;
+        h4 {
+          font-size: 28px;
+          line-height: 34px;
+          letter-spacing: 0.0022em;
+        }
+      }
+
+      .card-body {
+        width: 200px;
+        .img-container {
+          width: 168px !important;
+          height: 92px !important;
+        }
+
+        .text-container {
+          width: 168px !important;
+
+          .brand,
+          .model-name {
+            h5 {
+              font-size: 14px;
+              line-height: 17px;
+              letter-spacing: -0.0278em;
+            }
+          }
+          .model-name h5 {
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: -0.0278em;
+          }
+
+          .model-year,
+          .acceleration,
+          .price {
+            h5 {
+              font-weight: 400 !important;
+              font-size: 14px !important;
+              line-height: 17px !important;
+              letter-spacing: -0.0278em !important;
+            }
+            span {
+              font-size: 16px !important;
+              line-height: 20px !important;
+              letter-spacing: -0.0278em !important;
+            }
+          }
+
+          .more-btn {
+            margin-top: 25px !important;
+            button {
+              height: 36px !important;
+              font-weight: 600 !important;
+              font-size: 16px !important;
+              line-height: 20px !important;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 450px) {
+      .title {
+        h4 {
+          font-size: 24px;
+          line-height: 29px;
+        }
+      }
+
+      .card-body {
+        width: 160px !important;
+        margin-right: 10px !important;
+        padding: 10px !important;
+
+        .img-container {
+          width: 100% !important;
+          height: 100% !important;
+          max-height: 50% !important;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .text-container {
+          width: 140px !important;
+
+          .brand,
+          .model-name {
+            h5 {
+              font-size: 11px !important;
+              line-height: 13px !important;
+            }
+          }
+          .model-name h5 {
+            font-size: 13px !important;
+            line-height: 16px !important;
+            letter-spacing: -0.0278em !important;
+          }
+
+          .model-year,
+          .acceleration,
+          .price {
+            h5 {
+              font-size: 11px !important;
+              line-height: 17px !important;
+            }
+            span {
+              font-size: 14px !important;
+              line-height: 17px !important;
+              letter-spacing: -0.0278em;
+            }
+          }
+
+          .more-btn {
+            margin-top: 9px !important;
+            button {
+              height: 36px !important;
+              font-weight: 600 !important;
+              font-size: 14px !important;
+              line-height: 20px !important;
+              color: #020204 !important;
+              background: var(--main-color) !important;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .card-body {
+        // margin-right: 5px !important;
+
+        .text-container {
+          width: 129px !important;
+        }
+      }
+    }
+
+    @media screen and (max-width: 380px) {
+      .card-body {
+        // margin-right: 5px !important;
+
+        .text-container {
+          width: 60% !important;
+        }
+      }
+    }
+  }
+}

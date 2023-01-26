@@ -1,0 +1,84 @@
+{
+  "trending": [
+    {
+      "id": 1,
+      "brand": "BMW",
+      "modelName": "M4 GTS",
+      "modelYear": "2022",
+      "path": "/cardetails",
+      "acceleration": "44X42",
+      "img": "../assets/imgs/0.png",
+      "price": "2000"
+    },
+    {
+      "id": 2,
+      "brand": "Mercedes",
+      "modelName": "Mercedes-AMG CLA",
+      "modelYear": "2021",
+      "path": "/cardetails",
+      "acceleration": "44X42",
+      "img": "../assets/imgs/0.png",
+      "price": "3000"
+    },
+    {
+      "id": 3,
+      "brand": "BMW",
+      "modelName": "M4 GTS",
+      "modelYear": "2022",
+      "path": "/cardetails",
+      "acceleration": "44X42",
+      "img": "../assets/imgs/0.png",
+      "price": "2000"
+    },
+    {
+      "id": 4,
+      "brand": "BMW",
+      "modelName": "M4 GTS",
+      "modelYear": "2022",
+      "path": "/cardetails",
+      "acceleration": "44X42",
+      "img": "../assets/imgs/0.png",
+      "price": "2000"
+    },
+    {
+      "id": 5,
+      "brand": "BMW",
+      "modelName": "M4 GTS",
+      "modelYear": "2022",
+      "path": "/cardetails",
+      "acceleration": "44X42",
+      "img": "../assets/imgs/0.png",
+      "price": "2000"
+    },
+    {
+      "id": 6,
+      "brand": "Mercedes",
+      "modelName": "Mercedes-AMG CLA",
+      "modelYear": "2021",
+      "path": "/cardetails",
+      "acceleration": "44X42",
+      "img": "../assets/imgs/0.png",
+      "price": "3000"
+    },
+    {
+      "id": 7,
+      "brand": "BMW",
+      "modelName": "M4 GTS",
+      "modelYear": "2022",
+      "path": "/cardetails",
+      "acceleration": "44X42",
+      "img": "../assets/imgs/0.png",
+      "price": "2000"
+    },
+    {
+      "id": 8,
+      "brand": "BMW",
+      "modelName": "M4 GTS",
+      "modelYear": "2022",
+      "path": "/cardetails",
+      "acceleration": "44X42",
+      "img": "../assets/imgs/0.png",
+      "price": "2000"
+    }
+  ]
+}

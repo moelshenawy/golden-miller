@@ -1,0 +1,209 @@
+.navbar {
+  --bs-navbar-brand-padding-y: 0 !important;
+}
+
+#navbar {
+  background-color: #020204;
+  // padding: 30px 0px 24px;
+  padding-top: 66px;
+  padding-bottom: 31px;
+
+  @media screen and (max-width: 450px) {
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+  .container {
+    // margin-top: 60px;
+    .logo {
+      align-items: flex-start;
+      img {
+        margin: 0;
+        width: 104px;
+        height: 40px;
+
+        &:first-child {
+          width: 55px;
+          height: 40px;
+        }
+
+        @media screen and (max-width: 992px) {
+          width: 77px;
+          height: 28px;
+
+          &:first-child {
+            width: 41px;
+            height: 28px;
+          }
+        }
+
+        @media screen and (max-width: 450px) {
+          width: 67px;
+          height: 24px;
+
+          &:first-child {
+            width: 36px;
+            height: 24px;
+          }
+        }
+      }
+    }
+
+    .burger-btn {
+      border: none;
+      outline: none;
+
+      svg {
+        color: var(--main-color);
+        width: 30px;
+        height: 30px;
+
+        @media screen and (max-width: 450px) {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+
+    .links-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media screen and (max-width: 992px) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 40px;
+
+        .links {
+          margin-bottom: 20px !important;
+          li {
+            margin-bottom: 10px !important;
+          }
+        }
+      }
+
+      @media screen and (max-width: 992px) {
+        padding: 20px;
+        background-color: rgba(112, 76, 37, 0.2);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+
+        .links {
+          margin: 0 !important;
+        }
+      }
+
+      @media screen and (max-width: 580px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .links {
+        .navbar-nav {
+          padding: 0;
+          margin: 0;
+          padding-left: 15px;
+          padding-right: 15px;
+
+          .nav-item {
+            &:not(:last-child) {
+              margin-right: 80px;
+
+              @media screen and (max-width: 1272px) {
+                margin-right: 40px;
+              }
+              @media screen and (max-width: 1170px) {
+                margin-right: 20px;
+              }
+            }
+            a {
+              font-family: var(--main-font);
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 24px;
+              letter-spacing: 0.0022em;
+              color: #fefefe;
+              transition: all 0.3s ease-in-out;
+              &:hover {
+                color: var(--main-color);
+              }
+            }
+          }
+
+          .active {
+            a {
+              font-weight: 700 !important;
+            }
+          }
+        }
+      }
+    }
+
+    .auth-methods {
+      @media screen and (max-width: 992px) {
+        height: 111px;
+        flex-direction: column;
+        justify-content: space-around;
+        justify-content: space-between !important;
+      }
+
+      .reg-btn {
+        a {
+          button {
+            font-family: var(--main-font);
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 0.0022em;
+            background-color: transparent;
+            transition: all 0.3s ease-in-out;
+            color: #b57f4f;
+            border: none;
+          }
+
+          &:hover {
+            button {
+              color: #fefefe;
+            }
+          }
+        }
+      }
+
+      .login-btn {
+        a {
+          text-decoration: none;
+
+          button {
+            width: 149px;
+            height: 40px;
+            background-color: var(--main-color);
+            border-radius: 10px;
+            border: none;
+            color: var(--black-color);
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease-in-out;
+          }
+
+          &:hover {
+            button {
+              color: #fefefe;
+            }
+          }
+        }
+      }
+    }
+  }
+}

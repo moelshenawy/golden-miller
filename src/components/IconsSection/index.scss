@@ -1,0 +1,137 @@
+#icons-section {
+  @media screen and (max-width: 992px) {
+    margin-top: 40px;
+  }
+
+  @media screen and (max-width: 450px) {
+    margin-top: 28px;
+  }
+
+  .container {
+    .box-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 48px 70px 78px 70px;
+
+      .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 103px;
+        height: 159px;
+
+        .icon-container {
+          position: relative;
+          width: 112px;
+          height: 159px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .layer {
+            position: absolute;
+            width: 142px;
+            height: 142px;
+            background-color: #292923;
+            background: rgba(41, 41, 35, 0.7);
+            filter: blur(20px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: -3;
+          }
+
+          svg {
+            width: 80px;
+            height: 80px;
+          }
+        }
+
+        .title {
+          margin-top: 20px;
+          h6 {
+            margin: 0;
+            font-family: var(--main-font);
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 39px;
+            letter-spacing: 0.0022em;
+            color: #fefefe;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 992px) {
+      .box-container {
+        padding: 22px 30px;
+        .box {
+          width: 83px;
+          height: 83px;
+
+          .icon-container {
+            .layer {
+              width: 100%;
+              height: 100%;
+              background: rgba(41, 41, 35, 0.7);
+              filter: blur(20px);
+            }
+
+            svg {
+              width: 46px;
+              height: 46px;
+            }
+          }
+
+          .title {
+            margin-top: 16px;
+            h6 {
+              font-size: 22px;
+              line-height: 27px;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 450px) {
+      .box-container {
+        padding: 0 !important;
+        // max-width: 95% !important;
+
+        .box {
+          width: 51px;
+          height: 69.78px;
+
+          .icon-container {
+            width: fit-content;
+            // align-self: ;
+            display: block;
+            text-align: center;
+            .layer {
+              display: none !important;
+            }
+
+            svg {
+              width: 36px;
+              height: 36px;
+            }
+          }
+
+          .title {
+            margin-top: 16px;
+            h6 {
+              font-size: 16px;
+              line-height: 20px;
+              letter-spacing: 0.0022em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,293 @@
+#company {
+  margin-top: 40px;
+  header {
+    background: url(../../assets/imgs/company-bg.png) no-repeat;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+
+    height: 560px;
+    position: relative;
+
+    @media screen and (max-width: 992px) {
+      height: 200px;
+    }
+
+    .text-container {
+      position: absolute;
+      bottom: 50%;
+      right: 50%;
+      transform: translate(50%, 50%);
+      background: rgba(112, 76, 37, 0.2);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 40px 30px;
+      overflow: hidden;
+      text-align: center;
+      @media screen and (max-width: 992px) {
+        width: 100% !important;
+        padding: 20px 15px;
+      }
+      @media screen and (max-width: 747px) {
+        bottom: 70px;
+      }
+      @media screen and (max-width: 750px) {
+        // bottom: 0;
+        width: 100% !important;
+      }
+
+      h1 {
+        font-family: var(--main-color);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 94.84%;
+        letter-spacing: -0.0028em;
+        color: #ffffff;
+        @media screen and (max-width: 1400px) {
+          font-size: 57px;
+        }
+        @media screen and (max-width: 1200px) {
+          font-size: 47px;
+        }
+        @media screen and (max-width: 992px) {
+          font-size: 33px;
+        }
+      }
+      .desc {
+        font-family: var(--main-color);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 94.84%;
+        letter-spacing: 0.0572em;
+        text-transform: uppercase;
+        color: #ffffff;
+        @media screen and (max-width: 1400px) {
+          font-size: 37px;
+        }
+        @media screen and (max-width: 1200px) {
+          font-size: 31px;
+        }
+        @media screen and (max-width: 992px) {
+          font-size: 19px;
+        }
+      }
+    }
+
+    .right-layer {
+      position: absolute;
+      right: -1px;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(
+        270deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.58) 80.27%,
+        #000000 95.24%
+      );
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+    .left-layer {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(
+        270deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.58) 80.27%,
+        #000000 95.24%
+      );
+      transform: matrix(1, 0, 0, -1, 0, 0);
+    }
+  }
+
+  #contact {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 190px;
+    .about-text {
+      .title {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 80px;
+        line-height: 107.34%;
+        letter-spacing: -0.0028em;
+        color: #b57f4f;
+
+        margin-bottom: 80px;
+      }
+      .info {
+        p {
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 140%;
+          letter-spacing: 0.0222em;
+          color: #fefefec4;
+
+          span {
+            color: #fefefe;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .about-img {
+      width: 712px;
+      height: 475px;
+      position: relative;
+
+      @media screen and (max-width: 992px) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          270.04deg,
+          #000000 -5.62%,
+          rgba(0, 0, 0, 0) 11.19%,
+          rgba(0, 0, 0, 0.58) 79.36%,
+          #000000 95.21%
+        );
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        // z-index: -1;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          270deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.58) 80.27%,
+          #000000 95.24%
+        );
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          270.04deg,
+          #000000 -5.62%,
+          rgba(0, 0, 0, 0) 11.19%,
+          rgba(0, 0, 0, 0.58) 79.36%,
+          #000000 95.21%
+        );
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+      }
+    }
+  }
+
+  #team {
+    .title {
+      margin-bottom: 40px;
+      h2 {
+        font-family: var(--main-font);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 49px;
+        letter-spacing: 0.0022em;
+        color: #fefefe;
+      }
+    }
+    .box-container {
+      .row {
+        &:not(:last-child) {
+          margin-bottom: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .box {
+            margin: auto;
+          }
+        }
+        .box-container,
+        .col {
+          .box {
+            // width: 300px;
+            // height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .img-container {
+              background-color: var(--main-color);
+              width: 280px;
+              height: 280px;
+              margin-bottom: 16px;
+              border-radius: 10px;
+
+              @media screen and (max-width: 1400px) {
+                width: 200px;
+                height: 200px;
+              }
+
+              img {
+                max-width: 100%;
+                max-height: 100%;
+              }
+            }
+
+            .name {
+              h5 {
+                font-family: var(--main-font);
+                font-style: normal;
+                font-weight: 700;
+                font-size: 19px;
+                line-height: 29px;
+                letter-spacing: 0.0022em;
+                color: #fefefe;
+              }
+            }
+            .job {
+              h6 {
+                font-family: var(--main-font);
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                text-align: center;
+                letter-spacing: 0.0022em;
+                color: #fefefe;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
