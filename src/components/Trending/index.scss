@@ -37,7 +37,7 @@
         }
 
         .rec-carousel-item {
-          .card-body {
+          .card-inner {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -46,6 +46,7 @@
             padding: 20px;
             margin-right: 24px;
             border-radius: 10px !important;
+            width: 282px;
 
             .img-container {
               width: 215px;
@@ -152,6 +153,61 @@
       }
     }
 
+    @media screen and (max-width: 1200px) {
+      .card-inner {
+        width: 200px !important;
+        .img-container {
+          width: calc(100% - 10px) !important;
+          height: 92px !important;
+        }
+
+        .text-container {
+          width: 180px !important;
+          max-height: 320px;
+
+          .brand,
+          .model-name {
+            h5 {
+              font-size: 14px;
+              line-height: 17px;
+              letter-spacing: -0.0278em;
+            }
+          }
+          .model-name h5 {
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: -0.0278em;
+          }
+
+          .model-year,
+          .acceleration,
+          .price {
+            h5 {
+              font-weight: 400 !important;
+              font-size: 14px !important;
+              line-height: 17px !important;
+              letter-spacing: -0.0278em !important;
+            }
+            span {
+              font-size: 16px !important;
+              line-height: 20px !important;
+              letter-spacing: -0.0278em !important;
+            }
+          }
+
+          .more-btn {
+            margin-top: 25px !important;
+            button {
+              height: 36px !important;
+              font-weight: 600 !important;
+              font-size: 16px !important;
+              line-height: 20px !important;
+            }
+          }
+        }
+      }
+    }
+
     @media screen and (max-width: 992px) {
       .title {
         margin-bottom: 20px;
@@ -162,7 +218,7 @@
         }
       }
 
-      .card-body {
+      .card-inner {
         width: 200px;
         .img-container {
           width: 168px !important;
@@ -223,10 +279,11 @@
         }
       }
 
-      .card-body {
+      .card-inner {
         width: 160px !important;
         margin-right: 10px !important;
         padding: 10px !important;
+        height: 266px;
 
         .img-container {
           width: 100% !important;
@@ -239,10 +296,9 @@
         }
 
         .text-container {
-          width: 140px !important;
+          width: calc(100% - 5px) !important;
 
-          .brand,
-          .model-name {
+          .brand {
             h5 {
               font-size: 11px !important;
               line-height: 13px !important;
@@ -251,6 +307,7 @@
           .model-name h5 {
             font-size: 13px !important;
             line-height: 16px !important;
+            font-weight: 600 !important;
             letter-spacing: -0.0278em !important;
           }
 
@@ -258,20 +315,25 @@
           .acceleration,
           .price {
             h5 {
-              font-size: 11px !important;
-              line-height: 17px !important;
+              font-style: normal !important;
+              font-weight: 400 !important;
+              font-size: 12px !important;
+              line-height: 15px !important;
+              letter-spacing: -0.0278em !important;
             }
             span {
+              font-style: normal;
+              font-weight: 500 !important;
               font-size: 14px !important;
               line-height: 17px !important;
-              letter-spacing: -0.0278em;
+              letter-spacing: -0.0278em !important;
             }
           }
 
           .more-btn {
             margin-top: 9px !important;
             button {
-              height: 36px !important;
+              height: 28px !important;
               font-weight: 600 !important;
               font-size: 14px !important;
               line-height: 20px !important;
@@ -284,21 +346,11 @@
     }
 
     @media screen and (max-width: 400px) {
-      .card-body {
+      .card-inner {
         // margin-right: 5px !important;
 
         .text-container {
           width: 129px !important;
-        }
-      }
-    }
-
-    @media screen and (max-width: 380px) {
-      .card-body {
-        // margin-right: 5px !important;
-
-        .text-container {
-          width: 60% !important;
         }
       }
     }

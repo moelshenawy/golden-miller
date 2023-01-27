@@ -57,10 +57,35 @@
             font-family: var(--main-font);
             font-style: normal;
             font-weight: 500;
-            font-size: 28px;
+            font-size: 26px;
             line-height: 39px;
             letter-spacing: 0.0022em;
             color: #fefefe;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      .box-container {
+        .box {
+          .icon-container {
+            .layer {
+              width: 100px;
+              height: 100px;
+            }
+
+            svg {
+              width: 70px;
+              height: 70px;
+            }
+          }
+
+          .title {
+            margin-top: 20px;
+            h6 {
+              font-size: 24px;
+            }
           }
         }
       }
@@ -74,6 +99,8 @@
           height: 83px;
 
           .icon-container {
+            width: 100px;
+            height: fit-content;
             .layer {
               width: 100%;
               height: 100%;
@@ -100,12 +127,12 @@
 
     @media screen and (max-width: 450px) {
       .box-container {
-        padding: 0 !important;
-        // max-width: 95% !important;
+        padding: 0;
+        // max-width: 95%;
 
         .box {
-          width: 51px;
-          height: 69.78px;
+          width: 51px !important;
+          height: 69.78px !important;
 
           .icon-container {
             width: fit-content;

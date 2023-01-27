@@ -12,13 +12,13 @@ const Trending = () => {
   const { bmw, i0, i1, carStatus } = imgs;
 
   const [breakPoints, setBreakPoints] = useState([
-    // { width: 1, itemsToShow: 2 },
-    { width: 1, itemsToShow: 2, pagination: false },
+    { width: 1, itemsToShow: 1, pagination: false },
+    // { width: 1, itemsToShow: 2, pagination: false },
     { width: 337, itemsToShow: 2, },
 
     { width: 450, itemsToShow: 2, },
     { width: 550, itemsToShow: 3, },
-    { width: 850, itemsToShow: 3 },
+    { width: 850, itemsToShow: 4 },
     { width: 1150, itemsToShow: 4, itemsToScroll: 2 },
     { width: 1450, itemsToShow: 5 },
     { width: 1750, itemsToShow: 6 },
@@ -125,7 +125,7 @@ const Trending = () => {
             >
               {
                 trendingCarsss.map((car, index) => (
-                  <div className="card-body" key={index}>
+                  <div className="card-inner" key={index}>
                     <div className="img-container">
                       <img src={car.img} alt="" loading='lazy' />
                     </div>
