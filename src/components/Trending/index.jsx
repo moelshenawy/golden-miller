@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './index.scss'
-import Carousel, { consts } from "react-elastic-carousel";
+// import Carousel, { consts } from "react-elastic-carousel";
 import imgs from '../../assets/constants/imgs'
 import { Link } from 'react-router-dom';
 import { ArrowRight, ArrowLeft } from './../../assets/svgs/';
@@ -123,7 +123,7 @@ const Trending = () => {
             <h4>Trending</h4>
           </div>
           <div className="trending-wrap">
-            <Carousel breakPoints={breakPoints}
+            {/* <Carousel breakPoints={breakPoints}
               pagination={true}
             >
               {
@@ -166,7 +166,7 @@ const Trending = () => {
                   </div>
                 ))
               }
-            </Carousel>
+            </Carousel> */}
           </div>
         </div>
         {/* </motion.div> */}

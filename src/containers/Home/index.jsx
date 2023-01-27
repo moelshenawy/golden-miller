@@ -7,7 +7,7 @@ const Home = () => {
       <Hero />
       <IconsSection />
       <About />
-      <Trending />
+      {/* <Trending /> */}
       <Footer />
     </>
   )
