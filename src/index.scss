@@ -1,7 +1,12 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
+
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -85,4 +90,14 @@ section {
     // padding-right: 0px;
     // padding-left: 0px;
   }
+}
+
+::-moz-selection {
+  color: #f8f8f8;
+  background: var(--main-color);
+}
+
+::selection {
+  color: #f8f8f8;
+  background: var(--main-color);
 }

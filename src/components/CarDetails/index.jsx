@@ -8,11 +8,11 @@ import imgs from '../../assets/constants/imgs'
 import ImageGallery from 'react-image-gallery';
 import { ArrowLeft, ArrowRight, ArrowDir, Phone } from '../../assets/svgs/'
 import "react-image-gallery/styles/css/image-gallery.css";
-
+import { RiGasStationFill } from 'react-icons/ri'
 const CarDetails = () => {
   const [car, setCar] = useState(null);
   const params = useParams();
-  const { carStatus, thumb1, thumb0, hourse, i1, i2, i3, i5, i6 } = imgs;
+  const { carStatus, thumb1, thumb0, hourse, i1, i5, i6 } = imgs;
 
   const getCar = async (id) => {
     const { data } = await axios.get(`http://localhost:8000/trending/${id}`);
@@ -146,7 +146,7 @@ const CarDetails = () => {
               <div className="icons-container">
                 <ArrowDir />
                 <img src={hourse} alt="" />
-                <div className="from-to">0-100</div>
+                <RiGasStationFill className='gas' />
               </div>
               <div className="engine-info">
                 <div className="inner">

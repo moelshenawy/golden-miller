@@ -160,22 +160,18 @@
           padding-bottom: 36px;
 
           svg {
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
+            color: #fefefe;
           }
           img {
             margin-top: 50px;
             width: 40px;
             height: 40px;
           }
-          .from-to {
+
+          .gas {
             margin-top: 46px;
-            font-family: var(--main-font);
-            font-style: normal;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 22px;
-            letter-spacing: -0.0278em;
             color: #fefefe;
           }
         }
@@ -204,7 +200,7 @@
                 font-family: var(--main-font);
                 font-style: normal;
                 font-weight: 600;
-                font-size: 24px;
+                font-size: 20px;
                 line-height: 29px;
                 letter-spacing: -0.0278em;
                 color: #fefefe;

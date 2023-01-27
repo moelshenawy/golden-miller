@@ -16,7 +16,7 @@ const Login = () => {
   useEffect(() => {
     if (inView) {
       animation.start({
-        y: 0,
+        x: 0,
         transition: {
           type: "spring",
           duration: 2,
@@ -26,23 +26,27 @@ const Login = () => {
     }
 
     if (!inView) {
-      animation.start({ y: '-100vh' })
+      animation.start({ x: '-100vw' })
     }
 
   }, [inView]);
+
   return (
     <>
       <div id='login'>
         <div className="container" ref={ref}>
+          <div className="back-container container">
+            <Back />
+          </div>
+
           <motion.div
             animate={animation}
-            className="reg-card">
+            className="login-card">
             <div className="card-inner">
               <div className="title">
-                <h1 className='h6'>Sign up</h1>
+                <h1 className='h6'>Login</h1>
               </div>
               <form action="">
-
                 <div className="email">
                   <label htmlFor="">Email*</label>
                   <input type="email" placeholder='john.doe@gmail.com' />
@@ -63,14 +67,13 @@ const Login = () => {
               </form>
 
               <div className="register">
-
                 <Link to='/register'>
                   Not Registered Yet?
                 </Link>
                 <p>Login with the data you entered during your registration</p>
                 <div className="login-btn">
                   <Link to='/login'>
-                    <button>Login</button>
+                    <button>Create an account</button>
                   </Link>
                 </div>
               </div>
@@ -78,7 +81,6 @@ const Login = () => {
             </div>
 
           </motion.div>
-          <Back />
         </div>
       </div>
     </>

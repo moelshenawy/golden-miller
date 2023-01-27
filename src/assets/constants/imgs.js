@@ -17,7 +17,8 @@ import i5 from "../imgs/5.png";
 import i6 from "../imgs/6.png";
 import logo1 from "../imgs/logo1.png";
 import ipad from "../imgs/ipad.webp";
-import register from "../imgs/register.png";
+// import register from "../imgs/register.png";
+import register from "../imgs/register.webp";
 
 export default {
   register,

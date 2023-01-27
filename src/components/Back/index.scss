@@ -1,0 +1,21 @@
+#back-btn {
+  width: 40px;
+  height: 40px;
+  background: rgba(2, 2, 4, 0.9);
+  backdrop-filter: blur(15px);
+  text-align: center;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    cursor: pointer;
+
+    svg {
+      color: #fefefe;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
