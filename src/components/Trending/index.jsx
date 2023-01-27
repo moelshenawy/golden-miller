@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import './index.scss'
-// import Carousel, { consts } from "react-elastic-carousel";
+import Carousel from "react-elastic-carousel";
 import imgs from '../../assets/constants/imgs'
 import { Link } from 'react-router-dom';
-import { ArrowRight, ArrowLeft } from './../../assets/svgs/';
-import { motion } from 'framer-motion';
 import trendingData from "../../data/db.json"
+
+
 
 const Trending = () => {
   const trendingCars = trendingData.trending
@@ -114,16 +114,13 @@ const Trending = () => {
   return (
     <>
       <section id='trending'>
-        {/* <motion.div
-          whileInView={{ opacity: [0, 1] }}
-          transition={{ duration: 1 }}
-        > */}
+
         <div className="container">
           <div className="title">
             <h4>Trending</h4>
           </div>
           <div className="trending-wrap">
-            {/* <Carousel breakPoints={breakPoints}
+            <Carousel breakPoints={breakPoints}
               pagination={true}
             >
               {
@@ -166,10 +163,9 @@ const Trending = () => {
                   </div>
                 ))
               }
-            </Carousel> */}
+            </Carousel>
           </div>
         </div>
-        {/* </motion.div> */}
 
       </section>
     </>
