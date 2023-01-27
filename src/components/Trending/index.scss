@@ -155,7 +155,7 @@
 
     @media screen and (max-width: 1200px) {
       .card-inner {
-        width: 200px !important;
+        width: 200px;
         .img-container {
           width: calc(100% - 10px) !important;
           height: 92px !important;
@@ -280,10 +280,10 @@
       }
 
       .card-inner {
-        width: 160px !important;
+        width: 160px;
         margin-right: 10px !important;
         padding: 10px !important;
-        height: 266px;
+        // height: 266px;s
 
         .img-container {
           width: 100% !important;
@@ -345,10 +345,9 @@
       }
     }
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 300px) {
       .card-inner {
-        // margin-right: 5px !important;
-
+        // width: 150px;
         .text-container {
           width: 129px !important;
         }
