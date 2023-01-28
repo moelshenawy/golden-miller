@@ -30,7 +30,6 @@ const Register = () => {
 
 
 
-  console.log(errorList.map((err) => err))
 
   const getUser = (e) => {
     let myUser = { ...user };
@@ -67,7 +66,8 @@ const Register = () => {
           setError(err.response.data.message)
         }
       })
-      if (data.message === "User Created") {
+      console.log(data)
+      if (data.code === 200) {
         // TODOS: navigate user to login
         navigate("/login");
         setIsLoading(false);
@@ -97,6 +97,8 @@ const Register = () => {
 
   const onFocus = () => {
     setErrorList([])
+    setError([])
+
   }
 
 
@@ -240,6 +242,9 @@ const Register = () => {
                 </div>
 
               </form>
+
+              {error && <div className="alert alert-danger">{error}</div>}
+
 
               <div className="login">
                 <Link to='/login'>

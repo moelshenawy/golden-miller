@@ -142,11 +142,14 @@ const CarDetails = () => {
 
       <section id='contact-us'>
         <div className="container">
+          <div className="title-container">
+            <h4 className='h2'>For Registration</h4>
+          </div>
+
           <div className="reg">
-            <div className="title">
-              <h4 className='h2'>For Registration</h4>
-            </div>
             <div className="call-btn">
+              <h4>Call us</h4>
+              <p>to know more details</p>
               <button>
                 <a href="tel:+(20)1000000000">
                   <Phone />
@@ -154,12 +157,17 @@ const CarDetails = () => {
                 </a>
               </button>
             </div>
-            <div className="or">Or</div>
-            <div className="client-number">
+
+            <div className="client-email">
               <div className="title">
-                <h4 className='h5'>Leave your Number and we will contact you</h4>
+                <h4 className='h5'>Leave your Email </h4>
+                <p>and we will contact you</p>
               </div>
-              <input type="text" placeholder='Leave your number' />
+              <form action="">
+                <input type="email" placeholder='example@gmail.com' />
+                <button type='submit'>Send</button>
+              </form>
+
             </div>
           </div>
         </div>

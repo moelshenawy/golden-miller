@@ -3,7 +3,6 @@
   background-position: center 83%;
   background-size: cover;
   width: 100%;
-  height: 100vh;
 
   .container {
     .login-card {
@@ -31,11 +30,8 @@
         }
 
         form {
-          .f-name,
-          .l-name,
           .email,
-          .password,
-          .conf-password {
+          .password {
             width: 100%;
             margin-bottom: 20px;
 
@@ -79,17 +75,15 @@
 
           .password {
             margin-bottom: 80px;
-          }
-
-          .password {
-            position: relative;
             .icon-container {
-              position: absolute;
-              top: 50%;
-              right: 10px;
-              cursor: pointer;
-
+              position: relative;
+              width: 100%;
+              height: 100%;
               svg {
+                position: absolute;
+                top: -40px;
+                right: 10px;
+                cursor: pointer;
                 width: 25px;
                 height: 25px;
                 color: var(--main-color);
