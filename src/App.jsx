@@ -1,6 +1,6 @@
 import Home from './containers/Home/index';
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Company, CarStatus, CarDetails, Login, Register } from './components'
+import { Company, CarStatus, CarDetails, Login, Register, NotFound } from './components'
 function App() {
   return (
     <Routes>
@@ -13,6 +13,7 @@ function App() {
       </Route >
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

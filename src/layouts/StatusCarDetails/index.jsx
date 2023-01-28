@@ -28,16 +28,9 @@ const StatusCarDetails = () => {
                   <h3 className='h6'>Model year</h3>
                   <span>2022</span>
                 </div>
-                <div className="car-acceleration">
-                  <h3 className='h6'>Acceleration</h3>
-                  <span>44x43</span>
 
-                </div>
-                <div className="car-price">
-                  <h3 className='h6'>Starting Price</h3>
-                  <span>2000 $</span>
 
-                </div>
+
               </div>
             </div>
           </div>

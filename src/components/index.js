@@ -9,3 +9,4 @@ export { default as CarDetails } from "./CarDetails/index";
 export { default as Register } from "./Register/index";
 export { default as Login } from "./Login/index";
 export { default as Footer } from "./Footer/index";
+export { default as NotFound } from "./NotFound/index";

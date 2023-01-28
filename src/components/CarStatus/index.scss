@@ -1,4 +1,6 @@
 #car-tracking {
+  text-align: center;
+
   .container {
     header {
       margin-bottom: 140px;
@@ -16,31 +18,39 @@
     .car-track-status {
       width: 100%;
       display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
+      align-items: center;
+      justify-content: center;
       flex-direction: column;
-      .line-container {
-        width: 86%;
-        margin-bottom: 35px;
-        position: relative;
-        .line {
-          position: absolute;
-          top: 0;
-          left: 47px;
-          width: 100%;
-          height: 1px;
-          width: 100%;
-          border: 2px solid #b57f4f;
-        }
-      }
 
       .car-track-status-container {
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column !important;
 
         .line-item {
+          width: 50%;
+          position: relative;
+
+          @media screen and (max-width: 1200px) {
+            width: 60%;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            height: 98%;
+            width: 100%;
+            top: 0;
+            left: -50px;
+            z-index: -1;
+            border-left: 2px solid #fefefe;
+          }
+
           .line-item-content {
             &:not(:last-child) {
-              margin-right: 30px;
+              margin-bottom: 95px;
             }
 
             .line-item-inner {
@@ -48,52 +58,105 @@
 
               &::after {
                 content: "";
-                top: -44px;
-                left: 47px;
+                top: 0;
+                left: -70px;
                 position: absolute;
-                width: 24px;
-                height: 24px;
+                width: 40px;
+                height: 40px;
                 border-radius: 50%;
-                background: #b57f4f;
+                background-color: #fefefe;
               }
 
               .line-item-text {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                @media screen and (max-width: 992px) {
+                  flex-direction: column;
+                }
+
                 .title {
-                  font-family: var(--main-font);
-                  font-style: normal;
-                  font-weight: 600;
-                  font-size: 21px;
-                  line-height: 107.34%;
-                  letter-spacing: -0.0028em;
-                  color: #fefefe;
+                  h3 {
+                    font-family: var(--main-font);
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 28px;
+                    line-height: 107.34%;
+                    letter-spacing: -0.0028em;
+                    color: #fefefe;
+                  }
                 }
                 .date {
-                  font-family: var(--main-font);
-                  font-style: normal;
-                  font-weight: 500;
-                  font-size: 14px;
-                  line-height: 107.34%;
-                  letter-spacing: -0.0028em;
-                  color: #fefefe;
-                  text-align: center;
+                  h3 {
+                    font-family: var(--main-font);
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 107.34%;
+                    color: #fefefe;
+                  }
                 }
               }
             }
           }
         }
+
         // active line-item
         .active {
           &::after {
-            left: 40px !important;
-            top: -50px !important;
-            width: 34px !important;
-            height: 34px !important;
+            top: 0 !important;
+            width: 40px !important;
+            height: 40px !important;
+            background-color: var(--main-color) !important;
           }
 
           .line-item-text {
             .title,
             .date {
-              color: var(--main-color) !important;
+              h3 {
+                color: var(--main-color) !important;
+              }
+            }
+
+            .title {
+              h3 {
+                font-size: 32px !important;
+              }
+            }
+            .date {
+              h3 {
+                font-size: 24px !important;
+              }
+            }
+          }
+        }
+
+        .not-updated {
+          &::after {
+            left: -61px !important;
+            width: 24px !important;
+            height: 24px !important;
+            background-color: #646463 !important;
+          }
+
+          .line-item-text {
+            .title,
+            .date {
+              h3 {
+                color: #646463 !important;
+              }
+            }
+
+            .title {
+              h3 {
+                font-weight: 500 !important;
+              }
+            }
+            .date {
+              h3 {
+                font-size: 24px !important;
+              }
             }
           }
         }
