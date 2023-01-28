@@ -44,7 +44,7 @@ const StatusCarDetails = () => {
             <h1>Status History</h1>
           </div>
 
-          <table className="table">
+          <table className="table table-responsive">
             <thead className="thead-dark">
               <tr>
                 <th scope="col">Day</th>
@@ -52,6 +52,8 @@ const StatusCarDetails = () => {
                 <th scope="col">Time</th>
                 <th scope="col">Status</th>
               </tr>
+              <tr className='space'></tr>
+
             </thead>
             <tbody>
               <tr>
@@ -60,6 +62,7 @@ const StatusCarDetails = () => {
                 <td>11:25 am</td>
                 <td>Reserved</td>
               </tr>
+
               <tr>
                 <th scope="row">Monday</th>
                 <td>11/5/2023</td>

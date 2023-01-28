@@ -71,7 +71,7 @@ const CarStatus = () => {
                       </div>
 
                       <div className="date">
-                        <h3>Saturday 11/05/2023</h3>
+                        <h3>Pending</h3>
                       </div>
                     </div>
                   </div>
@@ -84,7 +84,7 @@ const CarStatus = () => {
                       </div>
 
                       <div className="date">
-                        <h3 >Saturday 11/05/2023</h3>
+                        <h3 >Pending</h3>
                       </div>
                     </div>
                   </div>
@@ -96,7 +96,7 @@ const CarStatus = () => {
                         <h3 >Arrived to port</h3>
                       </div>
                       <div className="date">
-                        <h3>Saturday 11/05/2023</h3>
+                        <h3>Pending</h3>
 
                       </div>
                     </div>
@@ -109,7 +109,7 @@ const CarStatus = () => {
                         <h3 >Delivered</h3>
                       </div>
                       <div className="date">
-                        <h3 >Saturday 11/05/2023</h3>
+                        <h3 >Pending</h3>
                       </div>
                     </div>
                   </div>

@@ -90,7 +90,7 @@ const Register = () => {
                 <Link to='/login'>
                   Already have an account?
                 </Link>
-                <p>Login with the data you entered during your registration</p>
+                <p>Register now to post, edit, and manage ads. It’s quick, easy, and free!</p>
                 <div className="login-btn">
                   <Link to='/login'>
                     <button>Login</button>
