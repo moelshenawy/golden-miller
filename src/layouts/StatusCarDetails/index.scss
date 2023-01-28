@@ -21,24 +21,83 @@
 
   .car-details-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     border-radius: 20px;
 
     @media screen and (max-width: 992px) {
       flex-direction: column;
     }
-    .img-container {
-      width: 601px;
-      height: 337px;
+
+    .thumbnails-container {
+      width: 701px;
       @media screen and (max-width: 992px) {
-        width: 100%;
-        height: 100%;
+        width: 100% !important;
+      }
+      .image-gallery-slide-wrapper {
+        .image-gallery-left-nav,
+        .image-gallery-right-nav {
+          display: none;
+        }
+
+        .image-gallery-bullets-container {
+          .image-gallery-bullet {
+            border: 1px solid var(--main-color) !important;
+            box-shadow: 0 0 0 0 !important;
+
+            &:hover {
+              background-color: var(--main-color);
+            }
+          }
+          .image-gallery-bullet.active {
+            background-color: var(--main-color);
+          }
+        }
+
+        .image-gallery-right-nav {
+          right: 4px;
+          max-width: 790px !important;
+        }
+        .image-gallery-left-nav {
+          left: 4px;
+        }
+        .image-gallery-left-nav,
+        .image-gallery-right-nav {
+          background-color: transparent;
+          position: absolute;
+          top: 50%;
+          border: none;
+          z-index: 999;
+        }
+
+        .image-gallery-thumbnails-wrapper.thumbnails-swipe-horizontal {
+          margin-bottom: 32px !important;
+        }
+      }
+      .image-gallery-play-button,
+      .image-gallery-fullscreen-button {
+        bottom: 0px;
+        filter: none !important;
+
+        svg {
+          color: var(--main-color);
+        }
       }
 
-      img {
-        width: 100%;
-        height: 100%;
+      .image-gallery-thumbnail + .image-gallery-thumbnail {
+        border-radius: 10px;
+      }
+      .image-gallery-thumbnail {
+        &:hover {
+          border-color: var(--main-color) !important;
+        }
+      }
+      .image-gallery-thumbnail.active,
+      .image-gallery-thumbnail:focus {
+        border: 4px solid var(--main-color);
+      }
+      .image-gallery-content .image-gallery-slide .image-gallery-image {
+        border-radius: 20px;
       }
     }
 
@@ -53,7 +112,8 @@
       border-radius: 20px;
 
       @media screen and (max-width: 1200px) {
-        width: 30%;
+        width: 20%;
+        padding: 20px;
       }
       @media screen and (max-width: 992px) {
         margin-top: 30px;

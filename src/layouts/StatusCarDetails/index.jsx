@@ -1,8 +1,62 @@
 import './index.scss';
 import imgs from '../../assets/constants/imgs'
+import "react-image-gallery/styles/css/image-gallery.css";
+import ImageGallery from 'react-image-gallery';
+import { RiGasStationFill } from 'react-icons/ri'
 
 const StatusCarDetails = () => {
-  const { carStatus } = imgs;
+  const { carStatus, thumb1, thumb0, hourse, i1, i5, i6 } = imgs;
+  const images = [
+    {
+      original: carStatus,
+      thumbnail: carStatus,
+    },
+
+    {
+      original: i1,
+      thumbnail: i1,
+    },
+
+    {
+      original: i5,
+      thumbnail: i5,
+    },
+    {
+      original: i6,
+      thumbnail: i6,
+    },
+    {
+      original: thumb1,
+      thumbnail: thumb1,
+    },
+    {
+      original: thumb0,
+      thumbnail: thumb0,
+    },
+    {
+      original: thumb0,
+      thumbnail: thumb0,
+    },
+    {
+      original: thumb0,
+      thumbnail: thumb0,
+    },
+    {
+      original: thumb0,
+      thumbnail: thumb0,
+    },
+    {
+      original: thumb0,
+      thumbnail: thumb0,
+    },
+    {
+      original: thumb0,
+      thumbnail: thumb0,
+    },
+  ];
+
+
+
 
   return (
     <>
@@ -13,8 +67,15 @@ const StatusCarDetails = () => {
           </div>
 
           <div className="car-details-container">
-            <div className="img-container">
-              <img src={carStatus} alt="" />
+            <div className="thumbnails-container">
+              <ImageGallery
+                items={images}
+                lazyLoad={true}
+                loading="lazy"
+                thumbnailLoading="lazy"
+                showBullets={true}
+              />
+
             </div>
             <div className="info-container">
               <div className="info-inner">

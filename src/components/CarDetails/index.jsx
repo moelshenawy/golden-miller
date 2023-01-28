@@ -73,33 +73,6 @@ const CarDetails = () => {
   ];
 
 
-  function renderLeftNav(onClick, disabled) {
-    return (
-      <button
-        type="button"
-        className="image-gallery-left-nav"
-        aria-label="Prev Slide"
-        disabled={disabled}
-        onClick={onClick}
-      >
-        <ArrowLeft size={30} color="#000" />
-      </button>
-    );
-  }
-
-  function renderRightNav(onClick, disabled) {
-    return (
-      <button
-        type="button"
-        className="image-gallery-right-nav"
-        aria-label="Next Slide"
-        disabled={disabled}
-        onClick={onClick}
-      >
-        <ArrowRight size={30} color="#000" />
-      </button>
-    );
-  }
 
 
   return (
@@ -111,8 +84,6 @@ const CarDetails = () => {
             <ImageGallery
               items={images}
               lazyLoad={true}
-              renderLeftNav={renderLeftNav}
-              renderRightNav={renderRightNav}
               loading="lazy"
               thumbnailLoading="lazy"
               showBullets={true}
