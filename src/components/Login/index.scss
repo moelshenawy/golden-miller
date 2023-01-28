@@ -4,6 +4,10 @@
   background-size: cover;
   width: 100%;
 
+  @media screen and (max-width: 992px) {
+    background: black !important;
+  }
+
   .container {
     .login-card {
       background-color: rgba(2, 2, 4, 0.9);
