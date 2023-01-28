@@ -46,6 +46,9 @@
             left: -50px;
             z-index: -1;
             border-left: 2px solid #fefefe;
+            @media screen and (max-width: 992px) {
+              height: 94%;
+            }
           }
 
           .line-item-content {

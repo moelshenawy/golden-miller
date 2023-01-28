@@ -6,12 +6,7 @@ import { StatusCarDetails } from '../../layouts';
 const CarStatus = () => {
   const [carStatus, setCarStatus] = useState(null)
 
-  // const statusData = [
-  //   { status: { reserved: resStatus: true  } }, date: "11/5/2023", id: 0 },
-  // ]
 
-
-  // console.log(statusData[0].status.reserved)
   return (
     <>
       <Navbar />
