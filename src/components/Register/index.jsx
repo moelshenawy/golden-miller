@@ -137,7 +137,7 @@ const Register = () => {
             <Back />
           </div>
           <motion.div
-            viewport={animation}
+            animate={animation}
             className="reg-card">
             <div className="card-inner">
               <div className="title">

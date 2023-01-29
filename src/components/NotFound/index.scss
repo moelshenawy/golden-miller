@@ -1,10 +1,19 @@
 #not-found {
   margin-top: 120px;
+
+  @media screen and (max-width: 992px) {
+    margin-top: 40px;
+  }
+
   .not-found-inner {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 16px;
+
+    @media screen and (max-width: 460px) {
+      flex-direction: column;
+    }
 
     .num4-l,
     .num4-r {

@@ -4,17 +4,14 @@ import Footer from './../Footer/index';
 import imgs from '../../assets/constants/imgs'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { appContext } from '../../Context/Store';
 
 const Company = () => {
   const { comp0 } = imgs;
+  const { ourTeam } = useContext(appContext)
 
-  const teams = [
-    { name: 'Ashraf Abd Al Salam', job: "CFO", id: 3 },
-    { name: 'Omar Hamada', job: "Co-founder & Salesman", id: 1 },
-    { name: 'Omar Essam', job: "Salesman", id: 2 },
-    { name: 'Abdelrahman Safwat', job: "Salesman", id: 4 },
-  ]
+
 
 
   const animation = useAnimation();
@@ -45,8 +42,6 @@ const Company = () => {
         <section id='company'>
           <div className="container" >
             <header >
-
-
               <motion.div
                 whileInView={{ opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}
@@ -63,7 +58,6 @@ const Company = () => {
             </header>
 
             <section id='contact' className="about" ref={ref}>
-
               <motion.div
                 animate={animation}
 
@@ -99,17 +93,20 @@ const Company = () => {
                       <div className="img-container">
                       </div>
                       <div className="name">
-                        <h5>Hamada Fahmy</h5>
+                        <h5>{
+                          ourTeam !== null &&
+                          ourTeam.data[0]?.name}</h5>
                       </div>
                       <div className="job">
-                        <h6>Founder & CEO</h6>
+                        <h6>{
+                          ourTeam !== null &&
+                          ourTeam.data[0]?.job_title}</h6>
                       </div>
                     </div>
                   </div>
                 </div>
-
                 <div className="row">
-                  {teams?.map((team, index) => (
+                  {ourTeam?.data.slice(1).map((team, index) => (
                     <div className="col-sm-12 col-md-4 col-lg-3 box-container" key={index}>
                       <div className="box">
                         <div className="img-container">
@@ -118,7 +115,7 @@ const Company = () => {
                           <h5>{team.name}</h5>
                         </div>
                         <div className="job">
-                          <h6>{team.job}</h6>
+                          <h6>{team.job_title}</h6>
                         </div>
                       </div>
                     </div>

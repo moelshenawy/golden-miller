@@ -1,7 +1,7 @@
 import './index.scss'
 import Navbar from './../Navbar/index';
 import Footer from './../Footer/index';
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import imgs from '../../assets/constants/imgs'
@@ -9,20 +9,24 @@ import ImageGallery from 'react-image-gallery';
 import { ArrowLeft, ArrowRight, ArrowDir, Phone } from '../../assets/svgs/'
 import "react-image-gallery/styles/css/image-gallery.css";
 import { RiGasStationFill } from 'react-icons/ri'
+import Joi from 'joi';
+import { appContext } from '../../Context/Store';
 const CarDetails = () => {
   const [car, setCar] = useState(null);
+  const [email, setEmail] = useState({
+    email: "",
+  });
+  const [errorList, setErrorList] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState();
+  const [isEmailSent, setIsEmailSent] = useState(false)
+
+  const { baseURL } = useContext(appContext)
+
+  const errRef = useRef()
+
   const params = useParams();
   const { carStatus, thumb1, thumb0, hourse, i1, i5, i6 } = imgs;
-
-  const getCar = async (id) => {
-    const { data } = await axios.get(`http://localhost:8000/trending/${id}`);
-    setCar(data);
-  };
-
-  useEffect(() => {
-    getCar(params.id)
-  }, []);
-
   const images = [
     {
       original: carStatus,
@@ -73,7 +77,83 @@ const CarDetails = () => {
   ];
 
 
+  // const getCar = async (id) => {
+  //   const { data } = await axios.get(`http://localhost:8000/trending/${id}`);
+  //   setCar(data);
+  // };
 
+  // useEffect(() => {
+  //   getCar(params.id)
+  // }, []);
+
+
+
+  const getEmail = (e) => {
+    let myEmail = email
+    myEmail[e.target.name] = e.target.value;
+
+    setEmail(myEmail);
+
+  };
+
+
+  const submitForm = async (e) => {
+    e.preventDefault();
+
+    setIsLoading(true);
+
+    let validationRes = validationForm();
+    // Check if Input is valid
+    if (validationRes.error) {
+      // push error to error List Array
+      setErrorList(validationRes.error.details);
+
+      setIsLoading(false);
+      setIsEmailSent(false)
+
+    } else {
+      setIsLoading(true);
+      setIsEmailSent(false)
+
+      // Send data to api
+      const { data } = await axios.post(
+        `https://goldenmiller.herokuapp.com/api/subscribe`,
+        email
+      ).catch(function (err) {
+
+        if (err.response) {
+          setIsLoading(false);
+          setError(err.response.data.message)
+        }
+      })
+      if (data.code === 200) {
+        setIsLoading(false);
+        setIsEmailSent(true)
+      } else {
+        setIsLoading(false);
+        setIsEmailSent(false)
+        setError(data.message);
+      }
+    }
+  };
+
+
+  const validationForm = () => {
+    let scheme = Joi.object({
+      email: Joi.string()
+        .email({ tlds: { allow: ["com", "net", "org"] } })
+        .required(),
+
+    });
+
+    return scheme.validate(email, { abortEarly: false });
+  };
+
+  const onFocus = () => {
+    setErrorList([])
+  }
+
+  // console.log()
 
   return (
     <>
@@ -151,20 +231,40 @@ const CarDetails = () => {
               <h4>Call us</h4>
               <p>to know more details</p>
               <button>
-                <a href="tel:+(20)1000000000">
+                <a href="tel:+(20)01000677558">
                   <Phone />
-                  Call Us On 01000000000
+                  Call Us On 01000677558
                 </a>
               </button>
             </div>
 
             <div className="client-email">
               <div className="title">
-                <h4 className='h5'>Leave your Email </h4>
-                <p>and we will contact you</p>
+                {isEmailSent === true ? (<>
+                  <h4 className='h5'>
+                    Thank your for subscribe,</h4>
+                  <p>we will Contact with You Soon</p>
+                </>) : (
+                  <>
+                    <h4 className='h5'>
+                      Leave your Email </h4>
+                    <p>and we will contact you</p>
+                  </>)}
+
+                {errorList.map((error, idx) => (
+                  <div key={idx}>
+                    {error.path[0] === 'email' && error.type === 'string.empty' && <div ref={errRef} className='alert p-2 alert-danger'>Email is not allowed to be empty"</div>}
+                    {error.path[0] === 'email' && error.type === 'string.email' && <div ref={errRef} className='alert p-2 alert-danger'>Email is not valid</div>}
+                  </div>
+                ))}
               </div>
-              <form action="">
-                <input type="email" placeholder='example@gmail.com' />
+              <form action="" onSubmit={submitForm}>
+                <input
+                  name='email'
+                  onFocus={onFocus}
+                  onChange={getEmail}
+                  type="email" placeholder='example@gmail.com' />
+
                 <button type='submit'>Send</button>
               </form>
 
