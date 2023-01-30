@@ -153,7 +153,6 @@ const CarDetails = () => {
     setErrorList([])
   }
 
-  // console.log()
 
   return (
     <>

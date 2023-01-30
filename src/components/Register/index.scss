@@ -4,10 +4,12 @@
   // 83%  , 25%
   background-size: cover;
   width: 100%;
+  padding-bottom: 40px;
 
   @media screen and (max-width: 992px) {
     background: black !important;
   }
+
   .container {
     .reg-card {
       background-color: rgba(2, 2, 4, 0.9);

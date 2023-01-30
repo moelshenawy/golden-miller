@@ -98,8 +98,6 @@ const Register = () => {
 
   const onFocus = () => {
     setErrorList([])
-    setError([])
-
   }
 
 
@@ -189,8 +187,8 @@ const Register = () => {
 
                   {errorList.map((error, idx) => (
                     <>
-                      {error.path[0] === 'email' && error.type === 'string.empty' && <div ref={ref} key={idx} className='alert p-2 alert-danger'>Email is not allowed to be empty"</div>}
-                      {error.path[0] === 'email' && error.type === 'string.email' && <div ref={ref} key={idx} className='alert p-2 alert-danger'>Email is not valid</div>}
+                      {error.path[0] === 'email' && error.type === 'string.empty' && <div ref={errRef} key={idx} className='alert p-2 alert-danger'>Email is not allowed to be empty"</div>}
+                      {error.path[0] === 'email' && error.type === 'string.email' && <div ref={errRef} key={idx} className='alert p-2 alert-danger'>Email is not valid</div>}
                     </>
                   ))}
 
@@ -211,7 +209,7 @@ const Register = () => {
                       {error.path[0] === 'password' && error.type === 'string.empty' && (
                         <>
                           <div
-                            ref={ref} key={idx} className='alert p-2 alert-danger'>Password is not allowed to be empty</div>
+                            ref={errRef} key={idx} className='alert p-2 alert-danger'>Password is not allowed to be empty</div>
                         </>
                       )}
 
@@ -244,7 +242,7 @@ const Register = () => {
 
               </form>
 
-              {error && error.length !== -1 && <div className="alert alert-danger">{error}</div>}
+              {error ? <div className="alert alert-danger">{error}</div> : ""}
               {console.log(error)}
 
               <div className="login">
