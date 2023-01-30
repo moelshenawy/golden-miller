@@ -35,6 +35,7 @@
       @media screen and (max-width: 992px) {
         width: 100% !important;
         padding: 20px 15px;
+        border-radius: 0;
       }
       @media screen and (max-width: 747px) {
         bottom: 70px;
@@ -124,11 +125,19 @@
         font-weight: 700;
         font-size: 40px;
         line-height: 49px;
+        @media screen and (max-width: 450px) {
+          font-size: 25px;
+          margin-bottom: 0;
+        }
       }
       p {
         font-weight: 400;
         font-size: 24px;
         line-height: 29px;
+        @media screen and (max-width: 450px) {
+          font-size: 18px;
+          margin-bottom: 0;
+        }
       }
     }
 
@@ -160,7 +169,13 @@
 
         @media screen and (max-width: 992px) {
           width: 384px;
+          padding: 32px 40px;
           margin-top: 30px;
+        }
+
+        @media screen and (max-width: 450px) {
+          width: 100% !important;
+          height: fit-content;
         }
 
         .title {
@@ -170,6 +185,10 @@
           letter-spacing: -0.0278em;
           color: #ffffff;
           margin-bottom: 24px;
+          @media screen and (max-width: 450px) {
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
         }
 
         .desc {
@@ -180,6 +199,9 @@
             letter-spacing: 0.0022em;
             margin-bottom: 0;
             color: #ffffff;
+            @media screen and (max-width: 450px) {
+              font-size: 15px;
+            }
           }
         }
       }
@@ -192,6 +214,10 @@
     justify-content: space-between;
     position: relative;
     margin-top: 190px;
+    @media screen and (max-width: 450px) {
+      margin-top: 100px;
+    }
+
     .about-text {
       .title {
         font-family: "Montserrat";
@@ -201,6 +227,14 @@
         line-height: 107.34%;
         letter-spacing: -0.0028em;
         color: #b57f4f;
+
+        @media screen and (max-width: 1200px) {
+          font-size: 60px;
+        }
+        @media screen and (max-width: 450px) {
+          font-size: 30px;
+          margin-bottom: 40px;
+        }
 
         margin-bottom: 80px;
       }
@@ -214,6 +248,11 @@
           letter-spacing: 0.0222em;
           color: #fefefec4;
 
+          @media screen and (max-width: 450px) {
+            font-size: 12px;
+            line-height: 140%;
+            letter-spacing: 0.0222em;
+          }
           span {
             color: #fefefe;
             font-weight: 500;
@@ -226,6 +265,11 @@
       width: 712px;
       height: 475px;
       position: relative;
+
+      @media screen and (max-width: 1200px) {
+        width: 400px;
+        height: 100%;
+      }
 
       @media screen and (max-width: 992px) {
         position: absolute;
@@ -302,6 +346,9 @@
         line-height: 49px;
         letter-spacing: 0.0022em;
         color: #fefefe;
+        @media screen and (max-width: 450px) {
+          font-size: 25px;
+        }
       }
     }
     .box-container {
@@ -324,6 +371,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+
+            @media screen and (max-width: 450px) {
+              margin-top: 30px;
+            }
 
             .img-container {
               background-color: var(--main-color);
@@ -352,6 +403,9 @@
                 line-height: 29px;
                 letter-spacing: 0.0022em;
                 color: #fefefe;
+                @media screen and (max-width: 450px) {
+                  font-size: 17px;
+                }
               }
             }
             .job {
@@ -364,6 +418,9 @@
                 text-align: center;
                 letter-spacing: 0.0022em;
                 color: #fefefe;
+                @media screen and (max-width: 450px) {
+                  font-size: 15px;
+                }
               }
             }
           }
