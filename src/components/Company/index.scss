@@ -1,13 +1,21 @@
 #company {
   margin-top: 40px;
   header {
-    background: url(../../assets/imgs/company-bg.png) no-repeat;
-    background-size: 100%;
+    background: url(../../assets/imgs/company-bg.webp) no-repeat;
+    // background-size: 100%;
     background-repeat: no-repeat;
-    background-position: top;
 
-    height: 560px;
+    height: 500px;
     position: relative;
+
+    background-position: center;
+    background-size: 1200px 100%;
+    width: 100%;
+
+    @media screen and (max-width: 1200px) {
+      height: 400px;
+      background-size: 100% !important;
+    }
 
     @media screen and (max-width: 992px) {
       height: 200px;
@@ -85,7 +93,7 @@
         270deg,
         rgba(0, 0, 0, 0) 0%,
         rgba(0, 0, 0, 0.58) 80.27%,
-        #000000 95.24%
+        rgb(0 0 0 / 68%) 95.24%
       );
       transform: matrix(-1, 0, 0, 1, 0, 0);
     }
@@ -99,9 +107,82 @@
         270deg,
         rgba(0, 0, 0, 0) 0%,
         rgba(0, 0, 0, 0.58) 80.27%,
-        #000000 95.24%
+        rgb(0 0 0 / 68%) 95.24%
       );
       transform: matrix(1, 0, 0, -1, 0, 0);
+    }
+  }
+
+  #services {
+    text-align: center;
+    .title {
+      font-family: var(--main-font);
+      font-style: normal;
+      color: #fefefe;
+      letter-spacing: 0.0022em;
+      h1 {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 49px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+
+    .boxes-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      @media screen and (max-width: 992px) {
+        flex-direction: column;
+      }
+      .box {
+        background: rgba(112, 76, 37, 0.2);
+        border-radius: 5px;
+        width: 384px;
+        height: 200px;
+        font-family: var(--main-font);
+        font-style: normal;
+        color: #ffffff;
+        padding: 32px 40px;
+
+        @media screen and (max-width: 1400px) {
+          width: 340px;
+        }
+
+        @media screen and (max-width: 1200px) {
+          width: 300px;
+          padding: 20px;
+        }
+
+        @media screen and (max-width: 992px) {
+          width: 384px;
+          margin-top: 30px;
+        }
+
+        .title {
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 29px;
+          letter-spacing: -0.0278em;
+          color: #ffffff;
+          margin-bottom: 24px;
+        }
+
+        .desc {
+          p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.0022em;
+            margin-bottom: 0;
+            color: #ffffff;
+          }
+        }
+      }
     }
   }
 

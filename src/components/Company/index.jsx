@@ -57,6 +57,37 @@ const Company = () => {
               <div className="left-layer" />
             </header>
 
+            <section id='services'>
+              <div className="title">
+                <h1 className='h3'>
+                  Services
+                </h1>
+                <p>What We Offer?</p>
+              </div>
+              <div className="boxes-container">
+
+                <div className="box">
+                  <div className="title">Full Service</div>
+                  <div className="desc">
+                    <p>fully responsible for bringing your car from Europe to your doorstep.</p>
+                  </div>
+                </div>
+                <div className="box">
+                  <div className="title">Euro Service</div>
+                  <div className="desc">
+                    <p>Choose and buy and shipping the suitable car for you from anywhere in Europe.</p>
+                  </div>
+                </div>
+                <div className="box">
+                  <div className="title">Consultation</div>
+                  <div className="desc">
+                    <p>Ask for anything related to cars and one of our special representatives will be with you anytime.</p>
+                  </div>
+                </div>
+              </div>
+
+            </section>
+
             <section id='contact' className="about" ref={ref}>
               <motion.div
                 animate={animation}

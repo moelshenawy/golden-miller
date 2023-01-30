@@ -5,7 +5,6 @@ import vision from "../imgs/vision-img.png";
 import goal from "../imgs/goal-img.png";
 import bmw from "../imgs/bmw.png";
 import footerbg from "../imgs/footer-bg.png";
-import companybg from "../imgs/company-bg.png";
 import comp0 from "../imgs/comp0.webp";
 import carStatus from "../imgs/carStatus.png";
 import thumb0 from "../imgs/thumb0.png";
@@ -40,6 +39,5 @@ export default {
   logo,
   bmw,
   footerbg,
-  companybg,
   comp0,
 };
