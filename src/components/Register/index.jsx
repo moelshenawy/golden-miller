@@ -22,7 +22,7 @@ const Register = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState();
 
-  const { baseURL } = useContext(appContext);
+  const { baseURL, saveUserData } = useContext(appContext);
 
   const navigate = useNavigate();
 
@@ -68,8 +68,9 @@ const Register = () => {
       })
       console.log(data)
       if (data.code === 200) {
-        // TODOS: navigate user to login
-        navigate("/login");
+        localStorage.setItem('userInfo', JSON.stringify(data.data.user));
+        saveUserData();
+        navigate("/");
         setIsLoading(false);
       } else {
         setIsLoading(false);
@@ -243,8 +244,8 @@ const Register = () => {
 
               </form>
 
-              {error && <div className="alert alert-danger">{error}</div>}
-
+              {error && error.length !== -1 && <div className="alert alert-danger">{error}</div>}
+              {console.log(error)}
 
               <div className="login">
                 <Link to='/login'>
