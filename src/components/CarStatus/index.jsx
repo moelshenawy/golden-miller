@@ -42,16 +42,22 @@ const CarStatus = () => {
 
 
 
-    if (data.code === 200) {
+    if (data.data.length > 0) {
       setLoader(false)
       setCarStatus(data);
+      if (data.data?.length > 0) {
+        setLoader(false)
+        setCarStatus(data);
 
+      }
     } else {
       setLoader(false)
       setCarStatus(null);
+
     }
   };
 
+  console.log(carStatus)
   return (
     <>
       <Navbar />
