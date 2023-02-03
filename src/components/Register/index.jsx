@@ -3,12 +3,13 @@ import { useContext, useEffect, useRef, useState } from 'react';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 import Back from './../Back/index';
 import { Link, useNavigate } from 'react-router-dom';
-import { motion, useAnimation } from 'framer-motion'
+import { useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
 import axios from "axios";
 import Joi from "joi";
 import { appContext } from "../../Context/Store";
 import Spinner from "react-bootstrap/Spinner";
+import { AnimatedDiv } from '../Animated';
 
 const Register = () => {
   const [showPass, setShowPass] = useState(false)
@@ -66,9 +67,11 @@ const Register = () => {
           setError(err.response.data.message)
         }
       })
-      console.log(data)
       if (data.code === 200) {
         localStorage.setItem('userInfo', JSON.stringify(data.data.user));
+        localStorage.setItem('userToken', JSON.stringify(data.data.token));
+
+
         saveUserData();
         navigate("/");
         setIsLoading(false);
@@ -135,7 +138,7 @@ const Register = () => {
           <div className="back-container container">
             <Back />
           </div>
-          <motion.div
+          <AnimatedDiv
             animate={animation}
             className="reg-card">
             <div className="card-inner">
@@ -258,7 +261,7 @@ const Register = () => {
               </div>
 
             </div>
-          </motion.div>
+          </AnimatedDiv>
         </div>
       </div>
     </>

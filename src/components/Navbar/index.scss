@@ -91,7 +91,7 @@
       @media screen and (max-width: 992px) {
         padding: 20px;
         background-color: rgba(112, 76, 37, 0.2);
-        border-radius: 20px;
+        border-radius: 5px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -190,7 +190,7 @@
             width: 149px;
             height: 40px;
             background-color: var(--main-color);
-            border-radius: 10px;
+            border-radius: 5px;
             border: none;
             color: var(--black-color);
             font-weight: 700;

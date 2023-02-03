@@ -2710,7 +2710,7 @@
   "resolved" "https://registry.npmjs.org/ansi-styles/-/ansi-styles-5.2.0.tgz"
   "version" "5.2.0"
 
-"anymatch@^3.0.3", "anymatch@~3.1.2":
+"anymatch@^3.0.3", "anymatch@^3.1.2", "anymatch@~3.1.2":
   "integrity" "sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw=="
   "resolved" "https://registry.npmjs.org/anymatch/-/anymatch-3.1.3.tgz"
   "version" "3.1.3"
@@ -6597,6 +6597,11 @@
   "resolved" "https://registry.npmjs.org/lodash.debounce/-/lodash.debounce-4.0.8.tgz"
   "version" "4.0.8"
 
+"lodash.get@^4.4.2":
+  "integrity" "sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ=="
+  "resolved" "https://registry.npmjs.org/lodash.get/-/lodash.get-4.4.2.tgz"
+  "version" "4.4.2"
+
 "lodash.memoize@^4.1.2":
   "integrity" "sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag=="
   "resolved" "https://registry.npmjs.org/lodash.memoize/-/lodash.memoize-4.1.2.tgz"
@@ -8132,10 +8137,31 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-18.2.0.tgz"
   "version" "18.2.0"
 
+"react-is@^18.2.0":
+  "integrity" "sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w=="
+  "resolved" "https://registry.npmjs.org/react-is/-/react-is-18.2.0.tgz"
+  "version" "18.2.0"
+
+"react-lazy-named@^1.2.2":
+  "integrity" "sha512-1iY53I9VUpV8O2LLfiQScYSQTz1zakEcvUVsXDW9b1k45CEU7gAwhIhc2lVpTDJyY3TNyNHCrTF5WDjFZ6TZkQ=="
+  "resolved" "https://registry.npmjs.org/react-lazy-named/-/react-lazy-named-1.2.2.tgz"
+  "version" "1.2.2"
+  dependencies:
+    "lodash.get" "^4.4.2"
+
 "react-lifecycles-compat@^3.0.4":
   "integrity" "sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA=="
   "resolved" "https://registry.npmjs.org/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz"
   "version" "3.0.4"
+
+"react-loader-spinner@^5.3.4":
+  "integrity" "sha512-G2vw4ssX+RDZ/vfaeva06yfNqyFViv/u+tVZ3kFLy5TKNlNx2DbuwreBSpRtPespQA+VxinxUJsigwLwG9erOg=="
+  "resolved" "https://registry.npmjs.org/react-loader-spinner/-/react-loader-spinner-5.3.4.tgz"
+  "version" "5.3.4"
+  dependencies:
+    "react-is" "^18.2.0"
+    "styled-components" "^5.3.5"
+    "styled-tools" "^1.7.2"
 
 "react-only-when@^1.0.2":
   "integrity" "sha512-agE6l3L6bqaVuwNtjihTQ36M+VBfPS63KOzcNL4ZTmlwSxQPvhzIqmBWfiol0/wLYmKxCcBqgXkEJpvj5Kob8Q=="
@@ -9038,7 +9064,7 @@
   "resolved" "https://registry.npmjs.org/style-loader/-/style-loader-3.3.1.tgz"
   "version" "3.3.1"
 
-"styled-components@^5.3.6":
+"styled-components@^5.3.5", "styled-components@^5.3.6":
   "integrity" "sha512-hGTZquGAaTqhGWldX7hhfzjnIYBZ0IXQXkCYdvF1Sq3DsUaLx6+NTHC5Jj1ooM2F68sBiVz3lvhfwQs/S3l6qg=="
   "resolved" "https://registry.npmjs.org/styled-components/-/styled-components-5.3.6.tgz"
   "version" "5.3.6"
@@ -9053,6 +9079,11 @@
     "hoist-non-react-statics" "^3.0.0"
     "shallowequal" "^1.1.0"
     "supports-color" "^5.5.0"
+
+"styled-tools@^1.7.2":
+  "integrity" "sha512-IjLxzM20RMwAsx8M1QoRlCG/Kmq8lKzCGyospjtSXt/BTIIcvgTonaxQAsKnBrsZNwhpHzO9ADx5te0h76ILVg=="
+  "resolved" "https://registry.npmjs.org/styled-tools/-/styled-tools-1.7.2.tgz"
+  "version" "1.7.2"
 
 "stylehacks@^5.1.1":
   "integrity" "sha512-sBpcd5Hx7G6seo7b1LkpttvTz7ikD0LlH5RmdcBNb6fFR0Fl7LQwHDFr300q4cwUqi+IYrFGmsIHieMBfnN/Bw=="
@@ -9207,6 +9238,14 @@
     "ansi-escapes" "^4.2.1"
     "supports-hyperlinks" "^2.0.0"
 
+"terser-brunch@^4.1.0":
+  "integrity" "sha512-B4I/x1ewiM2OPjlc8bKmCJZhlIeSwNanplmdm10S8CHv/rMrGRAenqLUbyTb+HkPEz/JOZ8m9ygBPqcKNxFZVA=="
+  "resolved" "https://registry.npmjs.org/terser-brunch/-/terser-brunch-4.1.0.tgz"
+  "version" "4.1.0"
+  dependencies:
+    "anymatch" "^3.1.2"
+    "terser" "^5.7.1"
+
 "terser-webpack-plugin@^5.1.3", "terser-webpack-plugin@^5.2.5":
   "integrity" "sha512-kfLFk+PoLUQIbLmB1+PZDMRSZS99Mp+/MHqDNmMA6tOItzRt+Npe3E+fsMs5mfcM0wCtrrdU387UnV+vnSffXQ=="
   "resolved" "https://registry.npmjs.org/terser-webpack-plugin/-/terser-webpack-plugin-5.3.6.tgz"
@@ -9218,7 +9257,7 @@
     "serialize-javascript" "^6.0.0"
     "terser" "^5.14.1"
 
-"terser@^5.0.0", "terser@^5.10.0", "terser@^5.14.1":
+"terser@^5.0.0", "terser@^5.10.0", "terser@^5.14.1", "terser@^5.7.1":
   "integrity" "sha512-xvQfyfA1ayT0qdK47zskQgRZeWLoOQ8JQ6mIgRGVNwZKdQMU+5FkCBjmv4QjcrTzyZquRw2FVtlJSRUmMKQslw=="
   "resolved" "https://registry.npmjs.org/terser/-/terser-5.16.1.tgz"
   "version" "5.16.1"

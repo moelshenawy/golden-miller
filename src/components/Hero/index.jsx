@@ -1,9 +1,9 @@
 import './index.scss'
 import { useEffect, } from 'react';
 import imgs from '../../assets/constants/imgs'
-import { motion, useAnimation } from 'framer-motion'
+import { useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
-
+import { AnimatedDiv } from '../Animated';
 const Hero = () => {
   const { heroCar, ipad } = imgs;
 
@@ -34,7 +34,7 @@ const Hero = () => {
   return (
     <>
       <section id='hero' ref={ref}>
-        <motion.div
+        <AnimatedDiv
           animate={animation}
 
         >
@@ -56,7 +56,7 @@ const Hero = () => {
             </div>
 
           </div>
-        </motion.div>
+        </AnimatedDiv>
         <div className="main-hero-bg">
           <div className="img-layer-top" />
           <div className="img-layer-bottom" />

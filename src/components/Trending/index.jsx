@@ -1,20 +1,19 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import './index.scss'
 import Carousel from "react-elastic-carousel";
-import imgs from '../../assets/constants/imgs'
 import { Link } from 'react-router-dom';
-import trendingData from "../../data/db.json"
+import { appContext } from '../../Context/Store';
 
 
 
 const Trending = () => {
-  const trendingCars = trendingData.trending
-  const { bmw, i0, i1, carStatus } = imgs;
 
-  const [breakPoints, setBreakPoints] = useState([
+  const { trendingCars } = useContext(appContext)
+
+  const [breakPoints] = useState([
     { width: 1, itemsToShow: 1, pagination: false },
     // { width: 1, itemsToShow: 2, pagination: false },
-    { width: 337, itemsToShow: 2, },
+    { width: 337, itemsToShow: 1, },
 
     { width: 450, itemsToShow: 2, },
     { width: 550, itemsToShow: 3, },
@@ -26,89 +25,6 @@ const Trending = () => {
 
 
 
-  const trendingCarsss = [
-    {
-      id: 1,
-      brand: "BMW",
-      modelName: "M4 GTS",
-      modelYear: "2022",
-      path: "/cardetails",
-      acceleration: "44X42",
-      img: bmw,
-      price: "2000"
-    },
-    {
-      id: 2,
-      brand: "Mercedes",
-      modelName: "Mercedes-AMG CLA",
-      modelYear: "2021",
-      path: "/cardetails",
-      acceleration: "44X42",
-      img: carStatus,
-      price: "3000"
-    },
-    {
-      id: 3,
-      brand: "BMW",
-      modelName: "M4 GTS",
-      modelYear: "2022",
-      path: "/cardetails",
-      acceleration: "44X42",
-      img: i0,
-      price: "2000"
-    },
-    {
-      id: 4,
-      brand: "BMW",
-      modelName: "M4 GTS",
-      modelYear: "2022",
-      path: "/cardetails",
-      acceleration: "44X42",
-      img: i1,
-      price: "2000"
-    },
-    {
-      id: 5,
-      brand: "BMW",
-      modelName: "M4 GTS",
-      modelYear: "2022",
-      path: "/cardetails",
-      acceleration: "44X42",
-      img: i1,
-      price: "2000"
-    },
-    {
-      id: 6,
-      brand: "Mercedes",
-      modelName: "Mercedes-AMG CLA",
-      modelYear: "2021",
-      path: "/cardetails",
-      acceleration: "44X42",
-      img: i0,
-      price: "3000"
-    },
-    {
-      id: 7,
-      brand: "BMW",
-      modelName: "M4 GTS",
-      modelYear: "2022",
-      path: "/cardetails",
-      acceleration: "44X42",
-      img: i0,
-      price: "2000"
-    },
-    {
-      id: 8,
-      brand: "BMW",
-      modelName: "M4 GTS",
-      modelYear: "2022",
-      path: "/cardetails",
-      acceleration: "44X42",
-      img: carStatus,
-      price: "2000"
-    }
-
-  ]
 
 
   return (
@@ -124,32 +40,27 @@ const Trending = () => {
               pagination={true}
             >
               {
-                trendingCarsss.map((car, index) => (
+                trendingCars?.data?.map((car, index) => (
                   <div className="card-inner" key={index}>
                     <div className="img-container">
-                      <img src={car.img} alt="" loading='lazy' />
+                      <img src={car.thunbnail.url} alt="" loading='lazy' />
                     </div>
                     <div className='text-container'>
                       <div className="brand">
-                        <h5 className='h6'>{car.brand}</h5>
+                        <h5 className='h6'>{car.car_brand}</h5>
                       </div>
                       <div className="model-name">
-                        <h5>{car.modelName}</h5>
+                        <h5>{car.car_model}</h5>
                       </div>
                       <div className="model-year d-flex">
                         <h5>Model year</h5>
-                        <span>{car.modelYear}</span>
+                        <span>{car.model_year}</span>
                       </div>
-                      <div className="acceleration d-flex">
-                        <h5>Acceleration</h5>
-                        <span>{car.acceleration}</span>
-                      </div>
+
                       <div className="
                     price d-flex">
-                        <h5>Starting
-                          Price</h5>
-                        <span>{car.
-                          price} $</span>
+                        <h5>Price Range</h5>
+                        <span>{car.range_price} 	&euro;</span>
                       </div>
                       <div className="more-btn">
                         <Link to={`/cardetails/${car.id}`}>

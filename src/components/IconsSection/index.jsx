@@ -1,12 +1,12 @@
 import './index.scss';
 import { Speed, CarMeter, Diamond, Dir } from '../../assets/svgs/'
-import { motion } from 'framer-motion';
+import { AnimatedDiv } from '../Animated';
 
 const IconsSection = () => {
   return (
     <>
       <section id='icons-section'>
-        <motion.div
+        <AnimatedDiv
           whileInView={{ opacity: [0, 1] }}
           transition={{ duration: 0.5 }}
         >
@@ -60,7 +60,7 @@ const IconsSection = () => {
 
             </div>
           </div>
-        </motion.div>
+        </AnimatedDiv>
 
       </section>
     </>

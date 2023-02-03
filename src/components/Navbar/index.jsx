@@ -77,7 +77,7 @@ const Navbar = () => {
                     <h6>{userData?.first_name}</h6>
                   </div>
                   <div className="logout-btn" onClick={logOut}>
-                    <Link to="/login">
+                    <Link to='/login' >
                       <button>
                         Sign Out
                       </button>

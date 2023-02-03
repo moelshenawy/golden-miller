@@ -2,10 +2,11 @@ import './index.scss'
 import Navbar from './../Navbar/index';
 import Footer from './../Footer/index';
 import imgs from '../../assets/constants/imgs'
-import { motion, useAnimation } from 'framer-motion'
+import { useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
 import { useContext, useEffect } from "react";
 import { appContext } from '../../Context/Store';
+import { AnimatedDiv } from '../Animated';
 
 const Company = () => {
   const { comp0 } = imgs;
@@ -42,7 +43,7 @@ const Company = () => {
         <section id='company'>
           <div className="container" >
             <header >
-              <motion.div
+              <AnimatedDiv
                 whileInView={{ opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}
 
@@ -51,7 +52,7 @@ const Company = () => {
                   GOLDEN MILLER
                 </h1>
                 <p className='desc'>THE WINNERS' CHOICE</p>
-              </motion.div>
+              </AnimatedDiv>
 
               <div className="right-layer" />
               <div className="left-layer" />
@@ -89,7 +90,7 @@ const Company = () => {
             </section>
 
             <section id='contact' className="about" ref={ref}>
-              <motion.div
+              <AnimatedDiv
                 animate={animation}
 
               >
@@ -104,7 +105,7 @@ const Company = () => {
                     <p>Mobile Number : <span> +200100000000</span> </p>
                   </div>
                 </div>
-              </motion.div>
+              </AnimatedDiv>
 
               <div className="about-img">
 

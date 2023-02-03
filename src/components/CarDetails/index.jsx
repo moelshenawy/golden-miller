@@ -11,6 +11,8 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import { RiGasStationFill } from 'react-icons/ri'
 import Joi from 'joi';
 import { appContext } from '../../Context/Store';
+import { Puff } from 'react-loader-spinner'
+
 const CarDetails = () => {
   const [car, setCar] = useState(null);
   const [email, setEmail] = useState({
@@ -21,71 +23,73 @@ const CarDetails = () => {
   const [error, setError] = useState();
   const [isEmailSent, setIsEmailSent] = useState(false)
 
-  const { baseURL } = useContext(appContext)
+  const { baseURL, } = useContext(appContext)
 
   const errRef = useRef()
 
   const params = useParams();
   const { carStatus, thumb1, thumb0, hourse, i1, i5, i6 } = imgs;
-  const images = [
-    {
-      original: carStatus,
-      thumbnail: carStatus,
-    },
+  // const images = [
+  //   {
+  //     original: carStatus,
+  //     thumbnail: carStatus,
+  //   },
 
-    {
-      original: i1,
-      thumbnail: i1,
-    },
+  //   {
+  //     original: i1,
+  //     thumbnail: i1,
+  //   },
 
-    {
-      original: i5,
-      thumbnail: i5,
-    },
-    {
-      original: i6,
-      thumbnail: i6,
-    },
-    {
-      original: thumb1,
-      thumbnail: thumb1,
-    },
-    {
-      original: thumb0,
-      thumbnail: thumb0,
-    },
-    {
-      original: thumb0,
-      thumbnail: thumb0,
-    },
-    {
-      original: thumb0,
-      thumbnail: thumb0,
-    },
-    {
-      original: thumb0,
-      thumbnail: thumb0,
-    },
-    {
-      original: thumb0,
-      thumbnail: thumb0,
-    },
-    {
-      original: thumb0,
-      thumbnail: thumb0,
-    },
-  ];
+  //   {
+  //     original: i5,
+  //     thumbnail: i5,
+  //   },
+  //   {
+  //     original: i6,
+  //     thumbnail: i6,
+  //   },
+  //   {
+  //     original: thumb1,
+  //     thumbnail: thumb1,
+  //   },
+  //   {
+  //     original: thumb0,
+  //     thumbnail: thumb0,
+  //   },
+  //   {
+  //     original: thumb0,
+  //     thumbnail: thumb0,
+  //   },
+  //   {
+  //     original: thumb0,
+  //     thumbnail: thumb0,
+  //   },
+  //   {
+  //     original: thumb0,
+  //     thumbnail: thumb0,
+  //   },
+  //   {
+  //     original: thumb0,
+  //     thumbnail: thumb0,
+  //   },
+  //   {
+  //     original: thumb0,
+  //     thumbnail: thumb0,
+  //   },
+  // ];
 
 
-  // const getCar = async (id) => {
-  //   const { data } = await axios.get(`http://localhost:8000/trending/${id}`);
-  //   setCar(data);
-  // };
+  const getCar = async (id) => {
+    const { data } = await axios.get(`${baseURL}/getCars/${id}`);
+    setCar(data);
+  };
 
-  // useEffect(() => {
-  //   getCar(params.id)
-  // }, []);
+  useEffect(() => {
+    getCar(params.id)
+  }, []);
 
+
+  console.log(car)
 
 
   const getEmail = (e) => {
@@ -157,67 +161,79 @@ const CarDetails = () => {
   return (
     <>
       <Navbar />
-      < section id='car-details' >
-        <div className="container">
-          <div className="thumbnails-container">
-            <ImageGallery
-              items={images}
-              lazyLoad={true}
-              loading="lazy"
-              thumbnailLoading="lazy"
-              showBullets={true}
-            />
+      {car === null ? <div className='d-flex mt-5 align-items-center justify-content-center'>
+        <Puff
+          height="80"
+          width="80"
+          radius={1}
+          color="#b57f4f"
+          ariaLabel="puff-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
+      </div> : <>
+        < section id='car-details' >
+          <div className="container">
+            <div className="thumbnails-container">
+              <ImageGallery
+                items={car.data?.images.map(item => ({ original: item.url, thumbnail: item.url }))}
+                lazyLoad={true}
+                loading="lazy"
+                thumbnailLoading="lazy"
+                showBullets={true}
+              />
 
-          </div>
-          <div className="car-info">
-            <div className="car-model">
-              <div className="car-model-inner">
-                <div className="brand">
-                  <h3>Mercedes</h3>
+            </div>
+            <div className="car-info">
+              <div className="car-model">
+                <div className="car-model-inner">
+                  <div className="brand">
+                    <h3>{car.data?.car_brand}</h3>
+                  </div>
+                  <div className="model">
+                    <h3>{car.data?.car_model}</h3>
+                  </div>
+                  <div className="year">
+                    <h3>Model year</h3>
+                    <span>{car.data?.model_year}</span>
+                  </div>
+
+                  <div className="price">
+                    <h3>Price</h3>
+                    <span>{car.data?.range_price} &euro;</span>
+                  </div>
                 </div>
-                <div className="model">
-                  <h3>M4 GTS</h3>
+              </div>
+              <div className="engine-container">
+                <div className="icons-container">
+                  <ArrowDir />
+                  <img src={hourse} alt="" />
+                  <RiGasStationFill className='gas' />
                 </div>
-                <div className="year">
-                  <h3>Model year</h3>
-                  <span>2022</span>
-                </div>
-                <div className="acceleration">
-                  <h3>Acceleration</h3>
-                  <span>44x43</span>
-                </div>
-                <div className="price">
-                  <h3>Price</h3>
-                  <span>2000 $</span>
+                <div className="engine-info">
+                  <div className="inner">
+                    <div className="info">
+                      <h3 className='h6'>{car.data?.engine}</h3>
+                      <span>Turbo</span>
+                    </div>
+                    <div className="info">
+                      <h3 className='h6'>{car.data?.power}HP</h3>
+
+                    </div>
+                    <div className="info">
+                      <h3 className='h6'>{car.data?.fuel_type}</h3>
+
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="engine-container">
-              <div className="icons-container">
-                <ArrowDir />
-                <img src={hourse} alt="" />
-                <RiGasStationFill className='gas' />
-              </div>
-              <div className="engine-info">
-                <div className="inner">
-                  <div className="info">
-                    <h3 className='h6'>1.3-LITER</h3>
-                    <span>Turbo</span>
-                  </div>
-                  <div className="info">
-                    <h3 className='h6'>163 HP</h3>
-
-                  </div>
-                  <div className="info">
-                    <h3 className='h6'>8.7 SEC</h3>
-
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
-        </div>
-      </ section>
+        </ section>
+      </>}
+
+
 
       <section id='contact-us'>
         <div className="container">

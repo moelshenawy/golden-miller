@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import './index.scss'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
-import { motion, useAnimation } from 'framer-motion'
+import { useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
 import { Link, useNavigate } from 'react-router-dom';
 import Back from './../Back/index';
@@ -9,6 +9,7 @@ import { appContext } from '../../Context/Store';
 import axios from "axios";
 import Joi from "joi";
 import Spinner from "react-bootstrap/Spinner";
+import { AnimatedDiv } from '../Animated';
 
 const Login = () => {
   const [showPass, setShowPass] = useState(true)
@@ -67,9 +68,10 @@ const Login = () => {
 
       if (data.code === 200) {
         localStorage.setItem('userInfo', JSON.stringify(data.data.user));
+        localStorage.setItem('userToken', JSON.stringify(data.data.token));
+
         saveUserData();
 
-        console.log(data.data.user)
         // TODOS: navigate user to login
         navigate("/");
         setIsLoading(false);
@@ -131,7 +133,7 @@ const Login = () => {
             <Back />
           </div>
 
-          <motion.div
+          <AnimatedDiv
             animate={animation}
             className="login-card">
             <div className="card-inner">
@@ -217,7 +219,7 @@ const Login = () => {
 
             </div>
 
-          </motion.div>
+          </AnimatedDiv>
         </div>
       </div>
     </>

@@ -28,7 +28,7 @@
       transform: translate(50%, 50%);
       background: rgba(112, 76, 37, 0.2);
       backdrop-filter: blur(15px);
-      border-radius: 20px;
+      border-radius: 5px;
       padding: 40px 30px;
       overflow: hidden;
       text-align: center;
@@ -381,7 +381,7 @@
               width: 280px;
               height: 280px;
               margin-bottom: 16px;
-              border-radius: 10px;
+              border-radius: 5px;
 
               @media screen and (max-width: 1400px) {
                 width: 200px;

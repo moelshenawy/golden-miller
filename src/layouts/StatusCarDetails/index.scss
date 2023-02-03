@@ -23,7 +23,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    border-radius: 20px;
+    border-radius: 5px;
 
     @media screen and (max-width: 992px) {
       flex-direction: column;
@@ -85,7 +85,7 @@
       }
 
       .image-gallery-thumbnail + .image-gallery-thumbnail {
-        border-radius: 10px;
+        border-radius: 5px;
       }
       .image-gallery-thumbnail {
         &:hover {
@@ -97,7 +97,7 @@
         border: 4px solid var(--main-color);
       }
       .image-gallery-content .image-gallery-slide .image-gallery-image {
-        border-radius: 20px;
+        border-radius: 5px;
       }
     }
 
@@ -109,7 +109,7 @@
       background: rgba(112, 76, 37, 0.2);
       backdrop-filter: blur(15px);
       padding: 40px;
-      border-radius: 20px;
+      border-radius: 5px;
 
       @media screen and (max-width: 1200px) {
         width: 20%;

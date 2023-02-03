@@ -50,15 +50,15 @@
 
             .img-container {
               width: 215px;
-              height: 136px;
+              height: 120px;
               margin-right: 0 !important;
               margin-bottom: 15px;
               align-self: center;
 
               img {
                 width: 100%;
-                max-height: 100%;
-                border-radius: 10px;
+                height: 100%;
+                border-radius: 5px;
               }
             }
 
@@ -84,7 +84,6 @@
               }
 
               .model-year,
-              .acceleration,
               .price {
                 display: flex;
                 align-items: center;
@@ -129,7 +128,7 @@
                     height: 47px;
                     background-color: transparent;
                     border: 2px solid var(--main-color);
-                    border-radius: 10px;
+                    border-radius: 5px;
                     color: var(--main-color);
                     font-family: var(--main-font);
                     font-style: normal;
@@ -180,7 +179,6 @@
           }
 
           .model-year,
-          .acceleration,
           .price {
             h5 {
               font-weight: 400 !important;
@@ -231,28 +229,27 @@
           .brand,
           .model-name {
             h5 {
-              font-size: 14px;
+              font-size: 13px;
               line-height: 17px;
               letter-spacing: -0.0278em;
             }
           }
           .model-name h5 {
-            font-size: 16px;
+            font-size: 15px;
             line-height: 20px;
             letter-spacing: -0.0278em;
           }
 
           .model-year,
-          .acceleration,
           .price {
             h5 {
               font-weight: 400 !important;
-              font-size: 14px !important;
+              font-size: 13px !important;
               line-height: 17px !important;
               letter-spacing: -0.0278em !important;
             }
             span {
-              font-size: 16px !important;
+              font-size: 15px !important;
               line-height: 20px !important;
               letter-spacing: -0.0278em !important;
             }
@@ -286,9 +283,9 @@
         // height: 266px;
 
         .img-container {
-          width: 100% !important;
-          height: 100% !important;
-          max-height: 50% !important;
+          width: 152.04px !important;
+          height: 84px !important;
+
           img {
             width: 100%;
             height: 100%;
@@ -341,15 +338,6 @@
               background: var(--main-color) !important;
             }
           }
-        }
-      }
-    }
-
-    @media screen and (max-width: 300px) {
-      .card-inner {
-        // width: 150px;
-        .text-container {
-          width: 129px !important;
         }
       }
     }

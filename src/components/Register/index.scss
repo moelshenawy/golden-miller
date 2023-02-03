@@ -1,5 +1,5 @@
 #register {
-  background: url(../../assets/imgs/login.png) no-repeat fixed;
+  background: url(../../assets/imgs/login.webp) no-repeat fixed;
   background-position: center 83%;
   // 83%  , 25%
   background-size: cover;
@@ -15,7 +15,7 @@
       background-color: rgba(2, 2, 4, 0.9);
       width: 705px;
       backdrop-filter: blur(15px);
-      border-radius: 20px;
+      border-radius: 5px;
 
       @media screen and (max-width: 992px) {
         width: 100%;
@@ -111,7 +111,7 @@
               width: 100%;
               padding: 16px 18px;
               background-color: #b57f4f;
-              border-radius: 10px;
+              border-radius: 5px;
               font-family: var(--main-color);
               font-style: normal;
               font-weight: 600;
@@ -160,7 +160,7 @@
                 height: 56px;
                 background-color: transparent;
                 border: 2px solid #b57f4f;
-                border-radius: 10px;
+                border-radius: 5px;
 
                 font-family: var(--main-color);
                 font-style: normal;

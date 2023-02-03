@@ -2,7 +2,7 @@ import './index.scss'
 import { Facebook, Instagram, } from '../../assets/svgs/'
 import { Link } from 'react-router-dom';
 import imgs from '../../assets/constants/imgs'
-import { motion } from 'framer-motion';
+import { AnimatedDiv } from '../Animated';
 
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <>
       <section id='footer'>
-        <motion.div whileInView={{ opacity: [0, 1] }}
+        <AnimatedDiv whileInView={{ opacity: [0, 1] }}
           transition={{ duration: 1 }}
         >
           <footer>
@@ -74,7 +74,7 @@ const Footer = () => {
               </div>
             </div>
           </footer>
-        </motion.div>
+        </AnimatedDiv>
       </section>
     </>
   )
