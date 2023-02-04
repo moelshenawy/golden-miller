@@ -246,7 +246,6 @@ const Register = () => {
               </form>
 
               {error ? <div className="alert alert-danger">{error}</div> : ""}
-              {console.log(error)}
 
               <div className="login">
                 <Link to='/login'>

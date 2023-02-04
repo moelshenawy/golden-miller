@@ -1,6 +1,6 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export let appContext = createContext();
 
@@ -9,13 +9,13 @@ export default function CounterContextProvider(props) {
   const [ourTeam, setOurTeam] = useState(null);
   const [userToken, setUserToken] = useState(null);
   const [trendingCars, setTrendingCars] = useState(null);
+  const [allLinks, setAllLinks] = useState(null);
 
   const baseURL = "https://dashboard.golden-miller.com/api";
 
   const header = { headers: { Authorization: `Bearer ${userToken}` } };
 
   const navigate = useNavigate();
-  // console.log(userToken);
   const saveUserData = () => {
     const userInfo = localStorage.getItem("userInfo");
     const getUserInfo = JSON.parse(userInfo);
@@ -44,6 +44,7 @@ export default function CounterContextProvider(props) {
   useEffect(() => {
     getAllTeams();
     getTrendingCars();
+    getAllLinks();
   }, []);
 
   // Get Apis
@@ -54,6 +55,10 @@ export default function CounterContextProvider(props) {
   const getTrendingCars = async () => {
     const { data } = await axios.get(`${baseURL}/getCars`);
     setTrendingCars(data);
+  };
+  const getAllLinks = async () => {
+    const { data } = await axios.get(`${baseURL}/getFollowUs`);
+    setAllLinks(data.data);
   };
 
   return (
@@ -66,6 +71,7 @@ export default function CounterContextProvider(props) {
         ourTeam,
         userToken,
         trendingCars,
+        allLinks,
       }}
     >
       {props.children}

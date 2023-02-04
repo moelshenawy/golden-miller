@@ -6,7 +6,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import imgs from '../../assets/constants/imgs'
 import ImageGallery from 'react-image-gallery';
-import { ArrowLeft, ArrowRight, ArrowDir, Phone } from '../../assets/svgs/'
+import { ArrowDir, Phone } from '../../assets/svgs/'
 import "react-image-gallery/styles/css/image-gallery.css";
 import { RiGasStationFill } from 'react-icons/ri'
 import Joi from 'joi';
@@ -28,7 +28,7 @@ const CarDetails = () => {
   const errRef = useRef()
 
   const params = useParams();
-  const { carStatus, thumb1, thumb0, hourse, i1, i5, i6 } = imgs;
+  const { hourse, } = imgs;
   // const images = [
   //   {
   //     original: carStatus,
@@ -89,7 +89,6 @@ const CarDetails = () => {
   }, []);
 
 
-  console.log(car)
 
 
   const getEmail = (e) => {
@@ -121,7 +120,7 @@ const CarDetails = () => {
 
       // Send data to api
       const { data } = await axios.post(
-        `https://goldenmiller.herokuapp.com/api/subscribe`,
+        `${baseURL}/subscribe`,
         email
       ).catch(function (err) {
 
@@ -200,7 +199,7 @@ const CarDetails = () => {
                   </div>
 
                   <div className="price">
-                    <h3>Price</h3>
+                    <h3>Price range</h3>
                     <span>{car.data?.range_price} &euro;</span>
                   </div>
                 </div>
@@ -215,7 +214,6 @@ const CarDetails = () => {
                   <div className="inner">
                     <div className="info">
                       <h3 className='h6'>{car.data?.engine}</h3>
-                      <span>Turbo</span>
                     </div>
                     <div className="info">
                       <h3 className='h6'>{car.data?.power}HP</h3>

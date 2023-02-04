@@ -57,7 +57,6 @@ const CarStatus = () => {
     }
   };
 
-  console.log(carStatus)
   return (
     <>
       <Navbar />

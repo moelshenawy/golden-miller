@@ -6,13 +6,9 @@
   width: 100%;
   padding-bottom: 40px;
 
-  @media screen and (max-width: 992px) {
-    background: black !important;
-  }
-
   .container {
     .reg-card {
-      background-color: rgba(2, 2, 4, 0.9);
+      background-color: rgb(2 2 4 / 55%);
       width: 705px;
       backdrop-filter: blur(15px);
       border-radius: 5px;

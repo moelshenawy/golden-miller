@@ -36,6 +36,7 @@ const Company = () => {
 
   }, [inView]);
 
+  console.log(ourTeam)
   return (
     <>
       <Navbar />
@@ -101,8 +102,8 @@ const Company = () => {
 
                   <div className="info">
                     <p>Head Office : <span>23 Abd Al Razek Al Sanhouri, <br /> Al Manteqah as Sadesah,  Nasr City, Cairo</span> </p>
-                    <p>Email : <span>info@goldenmiller.com</span> </p>
-                    <p>Mobile Number : <span> +200100000000</span> </p>
+                    <p>Email : <span>info@golden-miller.com</span> </p>
+                    <p>Mobile Number : <span> +201000677558</span> </p>
                   </div>
                 </div>
               </AnimatedDiv>
@@ -142,6 +143,7 @@ const Company = () => {
                     <div className="col-sm-12 col-md-4 col-lg-3 box-container" key={index}>
                       <div className="box">
                         <div className="img-container">
+                          <img src={team.image} alt="" />
                         </div>
                         <div className="name">
                           <h5>{team.name}</h5>

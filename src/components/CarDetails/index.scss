@@ -177,8 +177,8 @@
           width: 70px;
           height: 265px;
 
-          padding-top: 40px;
-          padding-bottom: 36px;
+          padding-top: 20px;
+          padding-bottom: 20px;
 
           svg {
             width: 35px;
@@ -215,7 +215,7 @@
             }
 
             .info {
-              margin-bottom: 48px;
+              margin-bottom: 54px;
               h3,
               span {
                 font-family: var(--main-font);
@@ -276,6 +276,10 @@
         border-radius: 5px;
         padding: 40px;
 
+        @media screen and (max-width: 450px) {
+          padding: 20px;
+        }
+
         p,
         h4 {
           text-align: center;
@@ -285,12 +289,20 @@
           font-size: 24px;
           line-height: 135%;
           color: #fefefe;
+
+          @media screen and (max-width: 450px) {
+            font-size: 18px;
+          }
         }
 
         p {
           font-weight: 400;
           font-size: 20px;
           margin-bottom: 32px;
+
+          @media screen and (max-width: 450px) {
+            font-size: 15px;
+          }
         }
 
         button {
@@ -299,7 +311,7 @@
           border-radius: 5px;
           padding: 14px 60px;
           @media screen and (max-width: 450px) {
-            width: 100%;
+            width: 250px;
             height: 60px;
             padding: 0 !important;
           }
@@ -323,6 +335,11 @@
         backdrop-filter: blur(15px);
         border-radius: 5px;
         padding: 40px;
+
+        @media screen and (max-width: 450px) {
+          padding: 20px !important;
+        }
+
         .title {
           p,
           h4 {
@@ -343,6 +360,7 @@
         }
 
         form {
+          display: flex;
           input {
             background-color: #f8f8f8;
             border: 2px solid var(--main-color);
