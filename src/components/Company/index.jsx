@@ -36,7 +36,7 @@ const Company = () => {
 
   }, [inView]);
 
-  console.log(ourTeam)
+
   return (
     <>
       <Navbar />
@@ -124,6 +124,7 @@ const Company = () => {
                   <div className="col" >
                     <div className="box">
                       <div className="img-container">
+                        <img src={ourTeam?.data[0]?.image} alt={ourTeam?.data[0]?.name} />
                       </div>
                       <div className="name">
                         <h5>{
@@ -143,7 +144,7 @@ const Company = () => {
                     <div className="col-sm-12 col-md-4 col-lg-3 box-container" key={index}>
                       <div className="box">
                         <div className="img-container">
-                          <img src={team.image} alt="" />
+                          <img src={team.image} alt={team.name} />
                         </div>
                         <div className="name">
                           <h5>{team.name}</h5>

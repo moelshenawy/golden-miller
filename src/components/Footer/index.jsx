@@ -4,11 +4,11 @@ import imgs from '../../assets/constants/imgs'
 import { AnimatedDiv } from '../Animated';
 import { useContext } from 'react';
 import { appContext } from '../../Context/Store';
-
-
+import { Facebook, Instagram } from '../../assets/svgs'
 const Footer = () => {
   const { logo, logo1 } = imgs;
   const { allLinks } = useContext(appContext)
+
   return (
     <>
       <section id='footer'>
@@ -34,7 +34,9 @@ const Footer = () => {
                             allLinks.map((link, idx) => (
                               <li key={idx}>
                                 <a href={link.value} target="_blank">
-                                  <img src={link.image} alt={link.key} />
+                                  {/* <img src={link.image} alt={link.key} /> */}
+                                  {link.key === "instagram" && <Instagram />}
+                                  {link.key === "facebook" && <Facebook />}
                                 </a>
                               </li>
 
