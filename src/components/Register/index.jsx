@@ -10,6 +10,7 @@ import Joi from "joi";
 import { appContext } from "../../Context/Store";
 import Spinner from "react-bootstrap/Spinner";
 import { AnimatedDiv } from '../Animated';
+import toast from 'react-hot-toast';
 
 const Register = () => {
   const [showPass, setShowPass] = useState(false)
@@ -73,6 +74,8 @@ const Register = () => {
 
 
         saveUserData();
+        toast.success('Successfully registered!')
+
         navigate("/");
         setIsLoading(false);
       } else {

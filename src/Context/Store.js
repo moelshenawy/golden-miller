@@ -1,6 +1,7 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 export let appContext = createContext();
 
@@ -37,6 +38,8 @@ export default function CounterContextProvider(props) {
     setUserData(null);
     localStorage.removeItem("userInfo");
     localStorage.removeItem("userToken");
+    toast.success("Successfully logged out!");
+
     navigate("/login");
   };
 

@@ -10,6 +10,7 @@ import axios from "axios";
 import Joi from "joi";
 import Spinner from "react-bootstrap/Spinner";
 import { AnimatedDiv } from '../Animated';
+import toast from 'react-hot-toast';
 
 const Login = () => {
   const [showPass, setShowPass] = useState(true)
@@ -73,6 +74,8 @@ const Login = () => {
         saveUserData();
 
         // TODOS: navigate user to login
+        toast.success('Successfully logged!')
+
         navigate("/");
         setIsLoading(false);
       } else {
@@ -127,11 +130,15 @@ const Login = () => {
 
   return (
     <>
+
       <div id='login'>
         <div className="container" ref={ref}>
           <div className="back-container container">
             <Back />
           </div>
+
+
+
 
           <AnimatedDiv
             animate={animation}
