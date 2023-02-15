@@ -4,11 +4,9 @@ import imgs from '../../assets/constants/imgs'
 import { AnimatedDiv } from '../Animated';
 import { useContext } from 'react';
 import { appContext } from '../../Context/Store';
-import { Facebook, Instagram } from '../../assets/svgs'
 const Footer = () => {
   const { logo, logo1 } = imgs;
-  const { allLinks } = useContext(appContext)
-
+  const { allLinks, contacts } = useContext(appContext)
   return (
     <>
       <section id='footer'>
@@ -34,9 +32,7 @@ const Footer = () => {
                             allLinks.map((link, idx) => (
                               <li key={idx}>
                                 <a href={link.value} target="_blank">
-                                  {/* <img src={link.image} alt={link.key} /> */}
-                                  {link.key === "instagram" && <Instagram />}
-                                  {link.key === "facebook" && <Facebook />}
+                                  <img src={link.image} alt="" />
                                 </a>
                               </li>
 
@@ -56,9 +52,9 @@ const Footer = () => {
                         Contact Info
                       </div>
                       <ul className='contact-links'>
-                        <li>Address :  23 Abd Al Razek Al <br /> Sanhouri, Al Manteqah as <br /> Sadesah,  Nasr City, Cairo </li>
-                        <li>Email : info@golden-miller.com</li>
-                        <li>Mobile Number : +201000677558</li>
+                        <li>Address :  {contacts?.data[0]?.address} </li>
+                        <li>Email : {contacts?.data[0]?.email} </li>
+                        <li>Mobile Number : (+20){contacts?.data[0]?.number} </li>
                       </ul>
                     </div>
                   </div>

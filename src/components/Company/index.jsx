@@ -10,7 +10,7 @@ import { AnimatedDiv } from '../Animated';
 
 const Company = () => {
   const { comp0 } = imgs;
-  const { ourTeam } = useContext(appContext)
+  const { ourTeam, contacts } = useContext(appContext)
 
 
 
@@ -37,6 +37,7 @@ const Company = () => {
   }, [inView]);
 
 
+  console.log()
   return (
     <>
       <Navbar />
@@ -101,9 +102,9 @@ const Company = () => {
                     luxury.</div>
 
                   <div className="info">
-                    <p>Head Office : <span>23 Abd Al Razek Al Sanhouri, <br /> Al Manteqah as Sadesah,  Nasr City, Cairo</span> </p>
-                    <p>Email : <span>info@golden-miller.com</span> </p>
-                    <p>Mobile Number : <span> +201000677558</span> </p>
+                    <p>Head Office : <span>{contacts?.data[0]?.address}</span> </p>
+                    <p>Email : <span>{contacts?.data[0]?.email}</span> </p>
+                    <p>Mobile Number : <span> (+20){contacts?.data[0]?.number}</span> </p>
                   </div>
                 </div>
               </AnimatedDiv>

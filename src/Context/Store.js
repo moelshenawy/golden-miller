@@ -11,6 +11,7 @@ export default function CounterContextProvider(props) {
   const [userToken, setUserToken] = useState(null);
   const [trendingCars, setTrendingCars] = useState(null);
   const [allLinks, setAllLinks] = useState(null);
+  const [contacts, setContacts] = useState(null);
 
   const baseURL = "https://dashboard.golden-miller.com/api";
 
@@ -48,6 +49,7 @@ export default function CounterContextProvider(props) {
     getAllTeams();
     getTrendingCars();
     getAllLinks();
+    getContacts();
   }, []);
 
   // Get Apis
@@ -63,6 +65,10 @@ export default function CounterContextProvider(props) {
     const { data } = await axios.get(`${baseURL}/getFollowUs`);
     setAllLinks(data.data);
   };
+  const getContacts = async () => {
+    const { data } = await axios.get(`${baseURL}/getContactUs`);
+    setContacts(data);
+  };
 
   return (
     <appContext.Provider
@@ -75,6 +81,7 @@ export default function CounterContextProvider(props) {
         userToken,
         trendingCars,
         allLinks,
+        contacts,
       }}
     >
       {props.children}

@@ -19,64 +19,16 @@ const CarDetails = () => {
     email: "",
   });
   const [errorList, setErrorList] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState();
+  const [setIsLoading] = useState(false);
+  const [setError] = useState();
   const [isEmailSent, setIsEmailSent] = useState(false)
 
-  const { baseURL, } = useContext(appContext)
+  const { baseURL, contacts } = useContext(appContext)
 
   const errRef = useRef()
 
   const params = useParams();
   const { hourse, } = imgs;
-  // const images = [
-  //   {
-  //     original: carStatus,
-  //     thumbnail: carStatus,
-  //   },
-
-  //   {
-  //     original: i1,
-  //     thumbnail: i1,
-  //   },
-
-  //   {
-  //     original: i5,
-  //     thumbnail: i5,
-  //   },
-  //   {
-  //     original: i6,
-  //     thumbnail: i6,
-  //   },
-  //   {
-  //     original: thumb1,
-  //     thumbnail: thumb1,
-  //   },
-  //   {
-  //     original: thumb0,
-  //     thumbnail: thumb0,
-  //   },
-  //   {
-  //     original: thumb0,
-  //     thumbnail: thumb0,
-  //   },
-  //   {
-  //     original: thumb0,
-  //     thumbnail: thumb0,
-  //   },
-  //   {
-  //     original: thumb0,
-  //     thumbnail: thumb0,
-  //   },
-  //   {
-  //     original: thumb0,
-  //     thumbnail: thumb0,
-  //   },
-  //   {
-  //     original: thumb0,
-  //     thumbnail: thumb0,
-  //   },
-  // ];
 
 
   const getCar = async (id) => {
@@ -244,9 +196,9 @@ const CarDetails = () => {
               <h4>Call us</h4>
               <p>to know more details</p>
               <button>
-                <a href="tel:+(20)01000677558">
+                <a href={`tel:+(20)${contacts?.data[0]?.number}`}>
                   <Phone />
-                  Call Us On 01000677558
+                  Call Us On {contacts?.data[0]?.number}
                 </a>
               </button>
             </div>
