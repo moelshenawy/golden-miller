@@ -101,3 +101,14 @@ section {
   color: #f8f8f8;
   background: var(--main-color);
 }
+
+@media screen and (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1440px !important;
+  }
+}
