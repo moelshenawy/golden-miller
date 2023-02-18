@@ -220,13 +220,13 @@
 
     .about-text {
       .title {
-        font-family: "Montserrat";
+        font-family: var(--main-font);
         font-style: normal;
         font-weight: 500;
         font-size: 80px;
         line-height: 107.34%;
         letter-spacing: -0.0028em;
-        color: #b57f4f;
+        color: var(--main-color);
 
         @media screen and (max-width: 1200px) {
           font-size: 60px;
@@ -246,7 +246,7 @@
         }
 
         p {
-          font-family: "Montserrat";
+          font-family: var(--main-font);
           font-style: normal;
           font-weight: 400;
           font-size: 20px;

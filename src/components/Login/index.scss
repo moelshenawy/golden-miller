@@ -98,7 +98,7 @@
             button {
               width: 100%;
               padding: 16px 18px;
-              background-color: #b57f4f;
+              background-color: var(--main-color);
               border-radius: 5px;
               font-family: var(--main-color);
               font-style: normal;
@@ -147,7 +147,7 @@
                 padding: 18px;
                 height: 56px;
                 background-color: transparent;
-                border: 2px solid #b57f4f;
+                border: 2px solid var(--main-color);
                 border-radius: 5px;
 
                 font-family: var(--main-color);
@@ -156,10 +156,10 @@
                 font-size: 16px;
                 line-height: 20px;
                 text-align: center;
-                color: #b57f4f;
+                color: var(--main-color);
                 transition: all 0.3s ease-in-out;
                 &:hover {
-                  background-color: #b57f4f;
+                  background-color: var(--main-color);
                   color: #f8f8f8;
                 }
               }

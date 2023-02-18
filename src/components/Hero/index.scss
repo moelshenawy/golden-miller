@@ -49,11 +49,11 @@
         margin-bottom: 80px;
 
         h1 {
-          font-family: "Montserrat";
+          font-family: var(--main-font);
           font-style: normal;
           font-weight: 500;
           font-size: 80px;
-          color: #b57f4f;
+          color: var(--main-color);
           margin-bottom: 0px;
         }
 

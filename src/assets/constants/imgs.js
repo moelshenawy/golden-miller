@@ -8,9 +8,17 @@ import hourse from "../imgs/hourse.webp";
 import logo1 from "../imgs/logo1.png";
 import ipad from "../imgs/ipad.webp";
 import NotFound from "../imgs/NotFound.webp";
+import diamond from "../svgs/diamond.svg";
+import carmeter from "../svgs/carmeter.svg";
+import dir from "../svgs/dir.svg";
+import speed from "../svgs/speed.svg";
 
 export default {
+  speed,
   NotFound,
+  dir,
+  carmeter,
+  diamond,
   ipad,
   logo1,
   hourse,

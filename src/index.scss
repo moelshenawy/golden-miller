@@ -78,20 +78,6 @@ section {
   background: #f8f8f8;
 }
 
-.container {
-  @media screen and (min-width: 1400px) {
-    min-width: 1200px;
-    // background-color: red;
-  }
-
-  @media screen and (min-width: 1400px) {
-    // margin-right: 119px;
-    // margin-left: 119px;
-    // padding-right: 0px;
-    // padding-left: 0px;
-  }
-}
-
 ::-moz-selection {
   color: #f8f8f8;
   background: var(--main-color);
@@ -109,6 +95,6 @@ section {
   .container-sm,
   .container-xl,
   .container-xxl {
-    max-width: 1440px !important;
+    max-width: 1360px !important;
   }
 }

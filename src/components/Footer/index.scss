@@ -138,6 +138,8 @@
               line-height: 140%;
               letter-spacing: 0.0222em;
               color: #fefefe;
+              width: 300px;
+
               &:not(:last-child) {
                 margin-bottom: 28px;
               }
@@ -183,7 +185,7 @@
               letter-spacing: 0.0222em;
               color: #ffffff;
               &:not(:last-child) {
-                margin-bottom: 28px;
+                margin-bottom: 60px;
               }
 
               @media screen and (max-width: 450px) {

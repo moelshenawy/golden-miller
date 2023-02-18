@@ -67,10 +67,15 @@ const Footer = () => {
                         <h3>Services</h3>
                       </div>
                       <ul className='services-links'>
-                        <li>Working days : From Saturday to Thursday
+                        <li>Working days: <p>
+                          From Saturday to Thursday
+                        </p>
                         </li>
-                        <li>VAT ID : 704-354-144</li>
-                        <li>Company Registration NO : 35281</li>
+                        <li>
+                          VAT ID : 704-354-144
+                          <p>Company Registration NO : 35281</p>
+
+                        </li>
                       </ul>
 
                     </div>

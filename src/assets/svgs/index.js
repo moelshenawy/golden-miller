@@ -1,7 +1,3 @@
-export { default as CarMeter } from "./CarMeter";
-export { default as Diamond } from "./Diamond";
-export { default as Dir } from "./Dir";
-export { default as Speed } from "./Speed";
 export { default as ArrowRight } from "./ArrowRight";
 export { default as ArrowLeft } from "./ArrowLeft";
 export { default as Instagram } from "./Instagram";

@@ -1,8 +1,9 @@
 import './index.scss';
-import { Speed, CarMeter, Diamond, Dir } from '../../assets/svgs/'
 import { AnimatedDiv } from '../Animated';
+import { imgs } from '../../assets/constants'
 
 const IconsSection = () => {
+  const { carmeter, speed, dir, diamond } = imgs
   return (
     <>
       <section id='icons-section'>
@@ -18,7 +19,7 @@ const IconsSection = () => {
                 <div className="icon-container">
                   <div className="layer">
                   </div>
-                  <CarMeter />
+                  <img src={carmeter} alt="Speed" />
                 </div>
                 <div className="title">
                   <h6>Speed</h6>
@@ -28,7 +29,7 @@ const IconsSection = () => {
                 <div className="icon-container">
                   <div className="layer">
                   </div>
-                  <Speed />
+                  <img src={speed} alt="Power" />
                 </div>
                 <div className="title">
                   <h6>Power</h6>
@@ -41,7 +42,7 @@ const IconsSection = () => {
                 <div className="icon-container">
                   <div className="layer">
                   </div>
-                  <Dir />
+                  <img src={dir} alt="Fluidity" />
                 </div>
                 <div className="title">
                   <h6>Fluidity</h6>
@@ -51,7 +52,7 @@ const IconsSection = () => {
                 <div className="icon-container">
                   <div className="layer">
                   </div>
-                  <Diamond />
+                  <img src={diamond} alt="Luxury" />
                 </div>
                 <div className="title">
                   <h6>Luxury</h6>

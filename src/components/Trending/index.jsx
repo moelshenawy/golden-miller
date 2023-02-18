@@ -11,7 +11,7 @@ const Trending = () => {
   const { trendingCars } = useContext(appContext)
 
   const [breakPoints] = useState([
-    { width: 1, itemsToShow: 1, pagination: false },
+    { width: 1, itemsToShow: 1, },
     // { width: 1, itemsToShow: 2, pagination: false },
     { width: 337, itemsToShow: 1, },
 

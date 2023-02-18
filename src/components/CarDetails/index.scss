@@ -305,7 +305,7 @@
 
         button {
           background-color: transparent;
-          border: 2px solid #b57f4f;
+          border: 2px solid var(--main-color);
           border-radius: 5px;
           padding: 14px 60px;
           @media screen and (max-width: 450px) {
@@ -388,7 +388,7 @@
             margin-left: 30px;
             width: 126px;
             height: 52px;
-            border: 2px solid #b57f4f;
+            border: 2px solid var(--main-color);
             border-radius: 5px;
             background-color: transparent;
             font-family: var(--main-color);
@@ -396,7 +396,7 @@
             font-weight: 600;
             font-size: 20px;
             line-height: 20px;
-            color: #b57f4f;
+            color: var(--main-color);
 
             @media screen and (max-width: 450px) {
               width: 80px;
